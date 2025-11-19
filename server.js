@@ -33,14 +33,22 @@ app.use('/api/notes', require('./routes/notes'));
 // Serve static files for uploads
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Serve static files from React app in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
-  
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+// Health check endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'EduLearn India API is running',
+    status: 'success',
+    endpoints: {
+      auth: '/api/auth',
+      subjects: '/api/subjects',
+      topics: '/api/topics',
+      content: '/api/content',
+      progress: '/api/progress',
+      notes: '/api/notes',
+      admin: '/api/admin'
+    }
   });
-}
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
