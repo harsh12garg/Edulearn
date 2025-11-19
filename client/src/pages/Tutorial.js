@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
+import API_BASE_URL from '../config';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus, vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { ThemeContext } from '../context/ThemeContext';
@@ -32,10 +33,10 @@ const Tutorial = () => {
 
   const fetchSubjectData = async () => {
     try {
-      const subjectRes = await axios.get(`http://localhost:5000/api/subjects/${slug}`);
+      const subjectRes = await axios.get(`${API_BASE_URL}/api/subjects/${slug}`);
       setSubject(subjectRes.data);
       
-      const topicsRes = await axios.get(`http://localhost:5000/api/topics/subject/${subjectRes.data._id}`);
+      const topicsRes = await axios.get(`${API_BASE_URL}/api/topics/subject/${subjectRes.data._id}`);
       setTopics(topicsRes.data);
       
       if (topicsRes.data.length > 0) {
@@ -49,7 +50,7 @@ const Tutorial = () => {
 
   const fetchTopicContent = async (topicId) => {
     try {
-      const contentRes = await axios.get(`http://localhost:5000/api/content/topic/${topicId}`);
+      const contentRes = await axios.get(`${API_BASE_URL}/api/content/topic/${topicId}`);
       setContent(contentRes.data);
     } catch (err) {
       console.error(err);

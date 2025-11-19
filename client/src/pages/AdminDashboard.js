@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import API_BASE_URL from '../config';
 import { AdminContext } from '../context/AdminContext';
 import { FiBook, FiFileText, FiLayers, FiLogOut, FiUpload, FiPlus, FiDownload, FiTrash, FiEdit, FiUsers } from 'react-icons/fi';
 import { FaFilePdf } from 'react-icons/fa';
@@ -38,7 +39,7 @@ const AdminDashboard = () => {
   const fetchStats = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const res = await axios.get('http://localhost:5000/api/admin/stats', {
+      const res = await axios.get(`${API_BASE_URL}/api/admin/stats`, {
         headers: { 'x-auth-token': token }
       });
       setStats(res.data);
@@ -52,7 +53,7 @@ const AdminDashboard = () => {
 
   const fetchRecentNotes = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/notes?limit=5');
+      const res = await axios.get(`${API_BASE_URL}/api/notes?limit=5`);
       setRecentNotes(res.data.slice(0, 5));
     } catch (err) {
       console.error(err);
@@ -70,7 +71,7 @@ const AdminDashboard = () => {
     }
     try {
       const token = localStorage.getItem('adminToken');
-      await axios.delete(`http://localhost:5000/api/notes/${id}`, {
+      await axios.delete(`${API_BASE_URL}/api/notes/${id}`, {
         headers: { 'x-auth-token': token }
       });
       fetchRecentNotes();
@@ -106,7 +107,7 @@ const AdminDashboard = () => {
       const token = localStorage.getItem('adminToken');
       
       const res = await axios.post(
-        'http://localhost:5000/api/admin/bulk-upload',
+        `${API_BASE_URL}/api/admin/bulk-upload`,
         data,
         { headers: { 'x-auth-token': token } }
       );
@@ -140,7 +141,7 @@ const AdminDashboard = () => {
       
       const token = localStorage.getItem('adminToken');
       const res = await axios.post(
-        'http://localhost:5000/api/admin/subjects',
+        `${API_BASE_URL}/api/admin/subjects`,
         subjectForm,
         { headers: { 'x-auth-token': token } }
       );

@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import axios from 'axios';
+import API_BASE_URL from '../config';
 import { motion } from 'framer-motion';
 import { FiUser, FiMail, FiBook, FiCheckCircle, FiClock, FiAward, FiTrendingUp } from 'react-icons/fi';
 
@@ -22,7 +23,7 @@ const Profile = () => {
 
   const fetchProgress = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/progress');
+      const res = await axios.get(`${API_BASE_URL}/api/progress`);
       setProgress(res.data);
     } catch (err) {
       console.error(err);

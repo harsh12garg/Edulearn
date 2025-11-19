@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_BASE_URL from '../config';
 import { motion } from 'framer-motion';
 import { FaUpload, FaTrash, FaFilePdf, FaDownload } from 'react-icons/fa';
 
@@ -20,7 +21,7 @@ const AdminNotes = () => {
 
   const fetchNotes = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/notes');
+      const res = await axios.get(`${API_BASE_URL}/api/notes`);
       setNotes(res.data);
       setLoading(false);
     } catch (err) {
@@ -67,7 +68,7 @@ const AdminNotes = () => {
 
     try {
       const token = localStorage.getItem('adminToken');
-      await axios.post('http://localhost:5000/api/notes/upload', data, {
+      await axios.post(`${API_BASE_URL}/api/notes/upload`, data, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'x-auth-token': token
@@ -98,7 +99,7 @@ const AdminNotes = () => {
 
     try {
       const token = localStorage.getItem('adminToken');
-      await axios.delete(`http://localhost:5000/api/notes/${id}`, {
+      await axios.delete(`${API_BASE_URL}/api/notes/${id}`, {
         headers: {
           'x-auth-token': token
         }

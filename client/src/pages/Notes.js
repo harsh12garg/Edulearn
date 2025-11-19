@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_BASE_URL from '../config';
 import { motion } from 'framer-motion';
 import { FaDownload, FaFilePdf, FaFilter, FaSearch } from 'react-icons/fa';
 
@@ -22,7 +23,7 @@ const Notes = () => {
 
   const fetchNotes = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/notes');
+      const res = await axios.get(`${API_BASE_URL}/api/notes`);
       setNotes(res.data);
       setLoading(false);
     } catch (err) {
@@ -33,7 +34,7 @@ const Notes = () => {
 
   const fetchSubjects = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/notes/filters/subjects');
+      const res = await axios.get(`${API_BASE_URL}/api/notes/filters/subjects`);
       setSubjects(res.data);
     } catch (err) {
       console.error(err);
@@ -60,7 +61,7 @@ const Notes = () => {
   const handleDownload = async (noteId, fileName) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/notes/${noteId}/download`,
+        `${API_BASE_URL}/api/notes/${noteId}/download`,
         { responseType: 'blob' }
       );
       

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import API_BASE_URL from '../config';
 import { FiEdit2, FiTrash2, FiEye, FiPlus, FiX, FiSave, FiArrowLeft } from 'react-icons/fi';
 
 const AdminManagement = () => {
@@ -20,7 +21,7 @@ const AdminManagement = () => {
   const fetchSubjects = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const res = await axios.get('http://localhost:5000/api/admin/subjects', {
+      const res = await axios.get(`${API_BASE_URL}/api/admin/subjects`, {
         headers: { 'x-auth-token': token }
       });
       setSubjects(res.data);
@@ -33,7 +34,7 @@ const AdminManagement = () => {
 
   const fetchTopics = async (subjectId) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/topics/subject/${subjectId}`);
+      const res = await axios.get(`${API_BASE_URL}/api/topics/subject/${subjectId}`);
       setTopics(res.data);
     } catch (err) {
       console.error(err);
@@ -58,7 +59,7 @@ const AdminManagement = () => {
 
     try {
       const token = localStorage.getItem('adminToken');
-      await axios.delete(`http://localhost:5000/api/admin/subjects/${subjectId}`, {
+      await axios.delete(`${API_BASE_URL}/api/admin/subjects/${subjectId}`, {
         headers: { 'x-auth-token': token }
       });
       alert('Subject deleted successfully!');
@@ -78,7 +79,7 @@ const AdminManagement = () => {
       
       if (editType === 'subject') {
         await axios.put(
-          `http://localhost:5000/api/admin/subjects/${editingItem._id}`,
+          `${API_BASE_URL}/api/admin/subjects/${editingItem._id}`,
           editingItem,
           { headers: { 'x-auth-token': token } }
         );
