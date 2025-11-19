@@ -1,0 +1,80 @@
+{
+  "subjects": [{
+    "name": "Mathematics Complete Course",
+    "slug": "mathematics-complete",
+    "icon": "🔢",
+    "category": "mathematics",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Percentages, Profit & Loss",
+      "slug": "percentages-profit-loss",
+      "description": "Understanding percentages, conversions, profit, loss, discount, and simple interest",
+      "order": 5,
+      "estimatedTime": 50,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Introduction to Percentages",
+          "type": "text",
+          "content": "Percentage means 'per hundred' or 'out of 100'. The symbol % represents percentage.\n\nKey Concepts:\n• 1% = 1/100 = 0.01\n• 50% = 50/100 = 1/2 = 0.5\n• 100% = 100/100 = 1 (whole)\n• 200% = 200/100 = 2 (double)\n\nConversions:\n\n1. Fraction to Percentage:\n   • Multiply by 100\n   • Formula: (Fraction × 100)%\n   • Example: 3/4 = (3/4 × 100)% = 75%\n\n2. Decimal to Percentage:\n   • Multiply by 100\n   • Example: 0.75 = 0.75 × 100 = 75%\n\n3. Percentage to Fraction:\n   • Divide by 100\n   • Simplify\n   • Example: 25% = 25/100 = 1/4\n\n4. Percentage to Decimal:\n   • Divide by 100\n   • Example: 45% = 45/100 = 0.45\n\nCommon Percentages:\n• 10% = 1/10 = 0.1\n• 20% = 1/5 = 0.2\n• 25% = 1/4 = 0.25\n• 50% = 1/2 = 0.5\n• 75% = 3/4 = 0.75\n• 100% = 1",
+          "order": 1
+        },
+        {
+          "title": "Calculating Percentages",
+          "type": "code",
+          "content": "Finding Percentage of a Number:\n\nExample 1: Find 20% of 500\nMethod 1:\n20% of 500 = 20/100 × 500\n= 20 × 5\n= 100\n\nMethod 2:\n20% = 0.20\n0.20 × 500 = 100\n\nAnswer: 100\n\nExample 2: Find 15% of 800\n15% of 800 = 15/100 × 800\n= 15 × 8\n= 120\n\nAnswer: 120\n\nFinding What Percent:\n\nExample 3: 25 is what percent of 200?\nPercent = (Part/Whole) × 100\n= (25/200) × 100\n= 0.125 × 100\n= 12.5%\n\nAnswer: 12.5%\n\nExample 4: 45 is what percent of 150?\n= (45/150) × 100\n= 0.3 × 100\n= 30%\n\nAnswer: 30%\n\nFinding the Whole:\n\nExample 5: 30% of what number is 90?\nLet number = x\n30% of x = 90\n30/100 × x = 90\nx = 90 × 100/30\nx = 300\n\nAnswer: 300",
+          "codeLanguage": "text",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Percentage Increase/Decrease",
+              "code": "Example 1: Increase\nA number increases from 80 to 100. Find percentage increase.\n\nSolution:\nIncrease = New - Old = 100 - 80 = 20\nPercentage increase = (Increase/Original) × 100\n= (20/80) × 100\n= 25%\n\nAnswer: 25% increase\n\nExample 2: Decrease\nPrice decreases from ₹500 to ₹400. Find percentage decrease.\n\nSolution:\nDecrease = 500 - 400 = 100\nPercentage decrease = (Decrease/Original) × 100\n= (100/500) × 100\n= 20%\n\nAnswer: 20% decrease",
+              "explanation": "Always calculate percentage change based on the original (old) value, not the new value."
+            }
+          ]
+        },
+        {
+          "title": "Profit and Loss",
+          "type": "text",
+          "content": "Profit and Loss deals with buying and selling of goods.\n\nKey Terms:\n• Cost Price (CP): Price at which item is bought\n• Selling Price (SP): Price at which item is sold\n• Profit: When SP > CP\n• Loss: When CP > SP\n• Marked Price (MP): Price marked on item\n• Discount: Reduction in marked price\n\nFormulas:\n\n1. Profit = SP - CP (when SP > CP)\n2. Loss = CP - SP (when CP > SP)\n\n3. Profit% = (Profit/CP) × 100\n4. Loss% = (Loss/CP) × 100\n\n5. SP = CP + Profit\n6. SP = CP - Loss\n\n7. SP = CP(100 + Profit%)/100\n8. SP = CP(100 - Loss%)/100\n\n9. CP = (SP × 100)/(100 + Profit%)\n10. CP = (SP × 100)/(100 - Loss%)\n\nDiscount:\n• Discount = MP - SP\n• Discount% = (Discount/MP) × 100\n• SP = MP - Discount\n• SP = MP(100 - Discount%)/100",
+          "order": 3
+        },
+        {
+          "title": "Profit and Loss Problems",
+          "type": "code",
+          "content": "Example 1: Finding Profit\nCP = ₹500, SP = ₹600. Find profit and profit%.\n\nSolution:\nProfit = SP - CP\n= 600 - 500\n= ₹100\n\nProfit% = (Profit/CP) × 100\n= (100/500) × 100\n= 20%\n\nAnswer: Profit = ₹100, Profit% = 20%\n\nExample 2: Finding Loss\nCP = ₹800, SP = ₹720. Find loss and loss%.\n\nSolution:\nLoss = CP - SP\n= 800 - 720\n= ₹80\n\nLoss% = (Loss/CP) × 100\n= (80/800) × 100\n= 10%\n\nAnswer: Loss = ₹80, Loss% = 10%\n\nExample 3: Finding SP from Profit%\nCP = ₹1,200, Profit% = 25%. Find SP.\n\nSolution:\nSP = CP(100 + Profit%)/100\n= 1200(100 + 25)/100\n= 1200 × 125/100\n= 1200 × 1.25\n= ₹1,500\n\nAnswer: SP = ₹1,500\n\nExample 4: Finding CP from Loss%\nSP = ₹900, Loss% = 10%. Find CP.\n\nSolution:\nCP = (SP × 100)/(100 - Loss%)\n= (900 × 100)/(100 - 10)\n= 90000/90\n= ₹1,000\n\nAnswer: CP = ₹1,000",
+          "codeLanguage": "text",
+          "order": 4,
+          "examples": [
+            {
+              "title": "Discount Problems",
+              "code": "Problem: A shirt marked at ₹800 is sold at 20% discount. Find:\na) Discount amount\nb) Selling price\n\nSolution:\nMP = ₹800\nDiscount% = 20%\n\na) Discount = MP × Discount%/100\n= 800 × 20/100\n= ₹160\n\nb) SP = MP - Discount\n= 800 - 160\n= ₹640\n\nOr directly:\nSP = MP(100 - Discount%)/100\n= 800 × 80/100\n= ₹640\n\nAnswer: a) ₹160, b) ₹640",
+              "explanation": "Discount is always calculated on Marked Price, not Cost Price. Selling Price = Marked Price - Discount."
+            }
+          ]
+        },
+        {
+          "title": "Simple Interest",
+          "type": "text",
+          "content": "Simple Interest is the interest calculated on the original principal amount.\n\nKey Terms:\n• Principal (P): Original amount borrowed/invested\n• Rate (R): Interest rate per year (%)\n• Time (T): Duration in years\n• Simple Interest (SI): Interest earned/paid\n• Amount (A): Principal + Interest\n\nFormulas:\n\n1. SI = (P × R × T)/100\n\n2. Amount = Principal + SI\n   A = P + SI\n\n3. P = (SI × 100)/(R × T)\n\n4. R = (SI × 100)/(P × T)\n\n5. T = (SI × 100)/(P × R)\n\nImportant Points:\n• Time must be in years\n• If time in months: T = months/12\n• If time in days: T = days/365\n• Rate is always per annum (per year)\n• SI is calculated on original principal only",
+          "order": 5
+        },
+        {
+          "title": "Simple Interest Problems",
+          "type": "code",
+          "content": "Example 1: Finding SI\nP = ₹5,000, R = 10% per annum, T = 2 years. Find SI and Amount.\n\nSolution:\nSI = (P × R × T)/100\n= (5000 × 10 × 2)/100\n= 100000/100\n= ₹1,000\n\nAmount = P + SI\n= 5000 + 1000\n= ₹6,000\n\nAnswer: SI = ₹1,000, Amount = ₹6,000\n\nExample 2: Finding Principal\nSI = ₹600, R = 12%, T = 2 years. Find P.\n\nSolution:\nP = (SI × 100)/(R × T)\n= (600 × 100)/(12 × 2)\n= 60000/24\n= ₹2,500\n\nAnswer: Principal = ₹2,500\n\nExample 3: Finding Rate\nP = ₹8,000, SI = ₹1,200, T = 3 years. Find R.\n\nSolution:\nR = (SI × 100)/(P × T)\n= (1200 × 100)/(8000 × 3)\n= 120000/24000\n= 5%\n\nAnswer: Rate = 5% per annum\n\nExample 4: Time in Months\nP = ₹10,000, R = 15%, T = 8 months. Find SI.\n\nSolution:\nT = 8/12 years = 2/3 years\n\nSI = (P × R × T)/100\n= (10000 × 15 × 2)/(100 × 3)\n= 300000/300\n= ₹1,000\n\nAnswer: SI = ₹1,000",
+          "codeLanguage": "text",
+          "order": 6,
+          "examples": [
+            {
+              "title": "Real-Life Application",
+              "code": "Problem: Raj deposits ₹25,000 in a bank at 8% simple interest per annum. How much money will he get after 3 years?\n\nSolution:\nP = ₹25,000\nR = 8%\nT = 3 years\n\nSI = (P × R × T)/100\n= (25000 × 8 × 3)/100\n= 600000/100\n= ₹6,000\n\nAmount = P + SI\n= 25000 + 6000\n= ₹31,000\n\nAnswer: Raj will get ₹31,000 after 3 years.",
+              "explanation": "Simple interest is used in loans, deposits, and investments. Amount received = Principal + Interest earned."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "JavaScript Complete Course",
+    "slug": "javascript-complete",
+    "icon": "🟨",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Error Handling and Debugging",
+      "slug": "js-error-handling",
+      "description": "Learn try-catch, error types, debugging techniques, and best practices",
+      "order": 10,
+      "estimatedTime": 35,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Understanding Errors",
+          "type": "text",
+          "content": "Errors are problems that occur during code execution. Proper error handling makes applications robust and user-friendly.\n\nTypes of Errors:\n\n1. Syntax Errors:\n   • Typos in code\n   • Missing brackets/semicolons\n   • Caught before execution\n   • Example: let x = ;  (missing value)\n\n2. Runtime Errors:\n   • Occur during execution\n   • Invalid operations\n   • Example: accessing undefined variable\n\n3. Logical Errors:\n   • Code runs but gives wrong result\n   • Hardest to find\n   • Example: wrong formula\n\nCommon Error Types:\n• ReferenceError: Variable not defined\n• TypeError: Wrong type operation\n• SyntaxError: Invalid syntax\n• RangeError: Number out of range\n• URIError: Invalid URI\n\nWhy Handle Errors?\n• Prevent app crashes\n• Better user experience\n• Easier debugging\n• Graceful degradation\n• Log errors for analysis",
+          "order": 1
+        },
+        {
+          "title": "Try-Catch-Finally",
+          "type": "code",
+          "content": "// Basic try-catch\ntry {\n  // Code that might throw error\n  let result = riskyOperation();\n  console.log(result);\n} catch (error) {\n  // Handle error\n  console.log('Error occurred:', error.message);\n}\n\n// Example: Accessing undefined variable\ntry {\n  console.log(nonExistentVariable);\n} catch (error) {\n  console.log('Error:', error.message);\n  // Error: nonExistentVariable is not defined\n}\n\n// Try-catch-finally\ntry {\n  let data = JSON.parse('{invalid json}');\n} catch (error) {\n  console.log('Parsing failed:', error.message);\n} finally {\n  // Always executes (success or error)\n  console.log('Cleanup code here');\n}\n\n// Throwing custom errors\nfunction divide(a, b) {\n  if (b === 0) {\n    throw new Error('Cannot divide by zero!');\n  }\n  return a / b;\n}\n\ntry {\n  let result = divide(10, 0);\n  console.log(result);\n} catch (error) {\n  console.log('Error:', error.message);\n  // Error: Cannot divide by zero!\n}\n\n// Custom error types\nclass ValidationError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n\nfunction validateAge(age) {\n  if (age < 0) {\n    throw new ValidationError('Age cannot be negative');\n  }\n  if (age > 150) {\n    throw new ValidationError('Age seems invalid');\n  }\n  return true;\n}\n\ntry {\n  validateAge(-5);\n} catch (error) {\n  if (error instanceof ValidationError) {\n    console.log('Validation Error:', error.message);\n  } else {\n    console.log('Unknown Error:', error);\n  }\n}",
+          "codeLanguage": "javascript",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Async Error Handling",
+              "code": "// Promise error handling\nfetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => {\n    console.log('Fetch error:', error.message);\n  });\n\n// Async/await error handling\nasync function fetchData() {\n  try {\n    let response = await fetch('https://api.example.com/data');\n    \n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    \n    let data = await response.json();\n    return data;\n  } catch (error) {\n    console.log('Error fetching data:', error.message);\n    // Return default data or rethrow\n    return null;\n  }\n}\n\n// Multiple async operations\nasync function processData() {\n  try {\n    let user = await fetchUser();\n    let posts = await fetchPosts(user.id);\n    let comments = await fetchComments(posts[0].id);\n    return comments;\n  } catch (error) {\n    console.log('Error in processing:', error.message);\n    throw error;  // Re-throw if needed\n  }\n}",
+              "explanation": "Use .catch() for promises and try-catch for async/await to handle asynchronous errors."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

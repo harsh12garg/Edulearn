@@ -1,0 +1,45 @@
+{
+  "subjects": [{
+    "name": "JavaScript Complete Course",
+    "slug": "javascript-complete",
+    "icon": "🟨",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Asynchronous JavaScript",
+      "slug": "js-async",
+      "description": "Master callbacks, promises, async/await, and asynchronous programming patterns",
+      "order": 8,
+      "estimatedTime": 60,
+      "difficulty": "hard",
+      "contents": [
+        {
+          "title": "Understanding Asynchronous Programming",
+          "type": "text",
+          "content": "JavaScript is single-threaded but can handle asynchronous operations using the event loop.\n\nSynchronous vs Asynchronous:\n\nSynchronous (Blocking):\n• Code executes line by line\n• Each line waits for previous to complete\n• Can freeze the UI\n• Example: Regular function calls\n\nAsynchronous (Non-blocking):\n• Code doesn't wait for completion\n• Continues to next line immediately\n• Uses callbacks/promises\n• Example: setTimeout, fetch, file operations\n\nWhy Asynchronous?\n• Better user experience\n• Don't block UI\n• Handle network requests\n• Perform time-consuming tasks\n• Multiple operations simultaneously\n\nAsynchronous Patterns:\n1. Callbacks (old way)\n2. Promises (ES6)\n3. Async/Await (ES8 - modern way)\n\nEvent Loop:\n• Call Stack: Executes synchronous code\n• Web APIs: Handle async operations\n• Callback Queue: Stores completed callbacks\n• Event Loop: Moves callbacks to stack",
+          "order": 1
+        },
+        {
+          "title": "Callbacks",
+          "type": "code",
+          "content": "// Simple callback example\nfunction greet(name, callback) {\n  console.log('Hello, ' + name);\n  callback();\n}\n\nfunction sayGoodbye() {\n  console.log('Goodbye!');\n}\n\ngreet('Raj', sayGoodbye);\n// Output:\n// Hello, Raj\n// Goodbye!\n\n// setTimeout - asynchronous callback\nconsole.log('Start');\n\nsetTimeout(function() {\n  console.log('This runs after 2 seconds');\n}, 2000);\n\nconsole.log('End');\n// Output:\n// Start\n// End\n// This runs after 2 seconds (after 2 sec delay)\n\n// Callback with data\nfunction fetchUser(userId, callback) {\n  setTimeout(function() {\n    const user = {\n      id: userId,\n      name: 'Priya Sharma',\n      email: 'priya@example.com'\n    };\n    callback(user);\n  }, 1000);\n}\n\nfetchUser(123, function(user) {\n  console.log('User:', user.name);\n});\n\n// Callback Hell (Pyramid of Doom)\ngetUser(1, function(user) {\n  getPosts(user.id, function(posts) {\n    getComments(posts[0].id, function(comments) {\n      console.log(comments);\n      // This gets messy with more nesting!\n    });\n  });\n});",
+          "codeLanguage": "javascript",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Promises - Better Way",
+              "code": "// Creating a promise\nlet promise = new Promise(function(resolve, reject) {\n  let success = true;\n  \n  setTimeout(function() {\n    if (success) {\n      resolve('Operation successful!');\n    } else {\n      reject('Operation failed!');\n    }\n  }, 1000);\n});\n\n// Using promise\npromise\n  .then(function(result) {\n    console.log(result);  // Operation successful!\n  })\n  .catch(function(error) {\n    console.log(error);\n  });\n\n// Promise chaining\nfunction fetchUser(id) {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      resolve({ id: id, name: 'Raj' });\n    }, 1000);\n  });\n}\n\nfunction fetchPosts(userId) {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      resolve(['Post 1', 'Post 2']);\n    }, 1000);\n  });\n}\n\n// Clean chaining (no callback hell)\nfetchUser(1)\n  .then(user => {\n    console.log('User:', user.name);\n    return fetchPosts(user.id);\n  })\n  .then(posts => {\n    console.log('Posts:', posts);\n  })\n  .catch(error => {\n    console.log('Error:', error);\n  });",
+              "explanation": "Promises provide a cleaner way to handle asynchronous operations and avoid callback hell."
+            },
+            {
+              "title": "Async/Await - Modern Way",
+              "code": "// Async function returns a promise\nasync function fetchData() {\n  return 'Data fetched!';\n}\n\nfetchData().then(data => console.log(data));\n\n// Using await (must be inside async function)\nasync function getUserData() {\n  try {\n    // Wait for promise to resolve\n    let user = await fetchUser(1);\n    console.log('User:', user.name);\n    \n    let posts = await fetchPosts(user.id);\n    console.log('Posts:', posts);\n    \n    return posts;\n  } catch (error) {\n    console.log('Error:', error);\n  }\n}\n\ngetUserData();\n\n// Multiple async operations\nasync function fetchMultiple() {\n  // Sequential (one after another)\n  let user1 = await fetchUser(1);\n  let user2 = await fetchUser(2);\n  \n  // Parallel (simultaneously)\n  let [userA, userB] = await Promise.all([\n    fetchUser(1),\n    fetchUser(2)\n  ]);\n  \n  console.log(userA, userB);\n}\n\n// Real-world example: Fetch API\nasync function getGitHubUser(username) {\n  try {\n    let response = await fetch(`https://api.github.com/users/${username}`);\n    let data = await response.json();\n    console.log(data.name);\n    return data;\n  } catch (error) {\n    console.log('Error fetching user:', error);\n  }\n}",
+              "explanation": "Async/await makes asynchronous code look and behave like synchronous code, making it easier to read and maintain."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

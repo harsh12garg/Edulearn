@@ -1,0 +1,71 @@
+{
+  "subjects": [{
+    "name": "Mathematics Complete Course",
+    "slug": "mathematics-complete",
+    "icon": "🔢",
+    "category": "mathematics",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Introduction to Algebra",
+      "slug": "algebra-basics",
+      "description": "Understanding variables, expressions, equations, and solving linear equations",
+      "order": 3,
+      "estimatedTime": 55,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "What is Algebra?",
+          "type": "text",
+          "content": "Algebra is a branch of mathematics that uses letters (variables) to represent unknown numbers.\n\nKey Concepts:\n\n1. Variable:\n   • A letter that represents an unknown number\n   • Common variables: x, y, z, a, b, c\n   • Example: In x + 5 = 10, x is the variable\n\n2. Constant:\n   • A fixed number that doesn't change\n   • Examples: 5, -3, 0, 100, π\n\n3. Coefficient:\n   • Number multiplied with a variable\n   • In 5x, coefficient is 5\n   • In -3y, coefficient is -3\n\n4. Term:\n   • A single number or variable or their product\n   • Examples: 5, x, 3y, -2xy, 7x²\n\n5. Expression:\n   • Combination of terms using +, -, ×, ÷\n   • Examples: 3x + 5, 2y - 7, 4x² + 3x - 2\n\n6. Equation:\n   • Two expressions connected by = sign\n   • Examples: x + 5 = 10, 2y - 3 = 7\n\nTypes of Expressions:\n• Monomial: One term (5x, 3y², -7)\n• Binomial: Two terms (3x + 5, 2y - 7)\n• Trinomial: Three terms (x² + 2x + 1)\n• Polynomial: Many terms",
+          "order": 1
+        },
+        {
+          "title": "Algebraic Operations",
+          "type": "text",
+          "content": "Rules for Algebraic Operations:\n\n1. Like Terms:\n   • Terms with same variable and same power\n   • Can be added or subtracted\n   • Examples: 3x and 5x, 2y² and -7y²\n\n2. Unlike Terms:\n   • Terms with different variables or powers\n   • Cannot be combined\n   • Examples: 3x and 5y, 2x and 3x²\n\nAddition and Subtraction:\n• Only like terms can be combined\n• Add/subtract coefficients, keep variable same\n• Examples:\n  - 3x + 5x = 8x\n  - 7y - 2y = 5y\n  - 4x² + 3x² = 7x²\n\nMultiplication:\n• Multiply coefficients\n• Add powers of same variable\n• Examples:\n  - 3x × 4x = 12x²\n  - 2y × 5y² = 10y³\n  - -3a × 2b = -6ab\n\nDivision:\n• Divide coefficients\n• Subtract powers of same variable\n• Examples:\n  - 12x ÷ 3x = 4\n  - 15y³ ÷ 3y = 5y²\n  - 20x²y ÷ 4xy = 5x",
+          "order": 2
+        },
+        {
+          "title": "Simplifying Expressions",
+          "type": "code",
+          "content": "Example 1: Combining Like Terms\nSimplify: 5x + 3y - 2x + 7y\n\nSolution:\nGroup like terms:\n= (5x - 2x) + (3y + 7y)\n= 3x + 10y\n\nAnswer: 3x + 10y\n\nExample 2: With Multiple Variables\nSimplify: 4a + 3b - 2a + 5b - a\n\nSolution:\nGroup like terms:\n= (4a - 2a - a) + (3b + 5b)\n= 1a + 8b\n= a + 8b\n\nAnswer: a + 8b\n\nExample 3: With Powers\nSimplify: 3x² + 5x - 2x² + 7x - 4\n\nSolution:\nGroup like terms:\n= (3x² - 2x²) + (5x + 7x) - 4\n= x² + 12x - 4\n\nAnswer: x² + 12x - 4\n\nExample 4: Multiplication\nSimplify: 3(2x + 5)\n\nSolution:\nDistribute 3:\n= 3 × 2x + 3 × 5\n= 6x + 15\n\nAnswer: 6x + 15",
+          "codeLanguage": "text",
+          "order": 3,
+          "examples": [
+            {
+              "title": "Distributive Property",
+              "code": "Simplify: 4(3x - 2) + 2(x + 5)\n\nSolution:\nStep 1: Distribute\n= 4×3x - 4×2 + 2×x + 2×5\n= 12x - 8 + 2x + 10\n\nStep 2: Combine like terms\n= (12x + 2x) + (-8 + 10)\n= 14x + 2\n\nAnswer: 14x + 2",
+              "explanation": "Distributive property: a(b + c) = ab + ac. Multiply each term inside brackets by the number outside."
+            }
+          ]
+        },
+        {
+          "title": "Solving Linear Equations",
+          "type": "text",
+          "content": "Linear Equation: Equation with variable having power 1\nGeneral form: ax + b = c\n\nSteps to Solve:\n1. Simplify both sides (if needed)\n2. Get all variable terms on one side\n3. Get all constant terms on other side\n4. Isolate the variable\n5. Solve for variable\n6. Verify the solution\n\nRules:\n• Same operation on both sides keeps equation balanced\n• Addition/Subtraction: Move terms by changing sign\n• Multiplication/Division: Multiply/divide both sides\n\nTransposition:\n• Moving a term from one side to other\n• Change sign when moving:\n  - + becomes -\n  - - becomes +\n  - × becomes ÷\n  - ÷ becomes ×\n\nVerification:\n• Substitute solution back in original equation\n• LHS should equal RHS\n• If equal, solution is correct",
+          "order": 4
+        },
+        {
+          "title": "Solving Equations - Examples",
+          "type": "code",
+          "content": "Example 1: Simple Equation\nSolve: x + 7 = 15\n\nSolution:\nx + 7 = 15\nTranspose 7 to RHS:\nx = 15 - 7\nx = 8\n\nVerification:\nLHS = 8 + 7 = 15\nRHS = 15\nLHS = RHS ✓\n\nAnswer: x = 8\n\nExample 2: With Coefficient\nSolve: 3x = 21\n\nSolution:\n3x = 21\nDivide both sides by 3:\nx = 21 ÷ 3\nx = 7\n\nVerification:\nLHS = 3 × 7 = 21\nRHS = 21\nLHS = RHS ✓\n\nAnswer: x = 7\n\nExample 3: Multiple Steps\nSolve: 2x + 5 = 17\n\nSolution:\n2x + 5 = 17\nTranspose 5:\n2x = 17 - 5\n2x = 12\nDivide by 2:\nx = 12 ÷ 2\nx = 6\n\nVerification:\nLHS = 2(6) + 5 = 12 + 5 = 17\nRHS = 17\nLHS = RHS ✓\n\nAnswer: x = 6\n\nExample 4: Variables on Both Sides\nSolve: 5x - 3 = 2x + 9\n\nSolution:\n5x - 3 = 2x + 9\nTranspose 2x to LHS:\n5x - 2x - 3 = 9\n3x - 3 = 9\nTranspose -3:\n3x = 9 + 3\n3x = 12\nx = 4\n\nAnswer: x = 4",
+          "codeLanguage": "text",
+          "order": 5,
+          "examples": [
+            {
+              "title": "Word Problem - Age",
+              "code": "Problem: Raj's age is 5 years more than twice Priya's age. If Raj is 25 years old, find Priya's age.\n\nSolution:\nLet Priya's age = x years\nRaj's age = 2x + 5\n\nGiven: Raj's age = 25\n2x + 5 = 25\n2x = 25 - 5\n2x = 20\nx = 10\n\nAnswer: Priya is 10 years old.",
+              "explanation": "Convert word problems to equations by identifying the unknown and relationships between quantities."
+            },
+            {
+              "title": "Word Problem - Money",
+              "code": "Problem: A pen costs ₹5 more than a pencil. If 3 pens and 2 pencils cost ₹85, find the cost of each.\n\nSolution:\nLet pencil cost = ₹x\nPen cost = ₹(x + 5)\n\n3 pens + 2 pencils = ₹85\n3(x + 5) + 2x = 85\n3x + 15 + 2x = 85\n5x + 15 = 85\n5x = 70\nx = 14\n\nPencil = ₹14\nPen = ₹14 + ₹5 = ₹19\n\nAnswer: Pencil costs ₹14, Pen costs ₹19",
+              "explanation": "Form equations from given conditions and solve step by step."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

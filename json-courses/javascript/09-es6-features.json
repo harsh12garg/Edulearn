@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "JavaScript Complete Course",
+    "slug": "javascript-complete",
+    "icon": "🟨",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "ES6+ Modern JavaScript Features",
+      "slug": "js-es6-features",
+      "description": "Learn modern JavaScript features - destructuring, spread operator, template literals, modules, and more",
+      "order": 9,
+      "estimatedTime": 50,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "ES6+ Overview",
+          "type": "text",
+          "content": "ES6 (ECMAScript 2015) introduced major improvements to JavaScript. Subsequent versions added more features.\n\nMajor ES6+ Features:\n• let and const (block scope)\n• Arrow functions\n• Template literals\n• Destructuring\n• Spread and rest operators\n• Default parameters\n• Classes\n• Modules (import/export)\n• Promises\n• Symbol\n• Map and Set\n• Iterators and generators\n\nES7+ Features:\n• Async/await (ES2017)\n• Object spread (ES2018)\n• Optional chaining (ES2020)\n• Nullish coalescing (ES2020)\n• Array methods (ES2019+)\n\nWhy Learn Modern JavaScript?\n• Cleaner, more readable code\n• Better performance\n• Industry standard\n• Required for frameworks\n• Improved developer experience",
+          "order": 1
+        },
+        {
+          "title": "Template Literals and Destructuring",
+          "type": "code",
+          "content": "// Template Literals (backticks)\nlet name = 'Raj';\nlet age = 25;\n\n// Old way\nlet message1 = 'My name is ' + name + ' and I am ' + age + ' years old';\n\n// New way (template literal)\nlet message2 = `My name is ${name} and I am ${age} years old`;\n\n// Multi-line strings\nlet html = `\n  <div>\n    <h1>${name}</h1>\n    <p>Age: ${age}</p>\n  </div>\n`;\n\n// Expressions in template literals\nlet price = 100;\nlet tax = 18;\nlet total = `Total: ${price + (price * tax / 100)}`;\n\n// Destructuring Arrays\nlet colors = ['red', 'green', 'blue'];\n\n// Old way\nlet color1 = colors[0];\nlet color2 = colors[1];\n\n// New way (destructuring)\nlet [first, second, third] = colors;\nconsole.log(first);   // red\nconsole.log(second);  // green\n\n// Skip elements\nlet [, , thirdColor] = colors;\nconsole.log(thirdColor);  // blue\n\n// Rest in destructuring\nlet [primary, ...others] = colors;\nconsole.log(primary);  // red\nconsole.log(others);   // ['green', 'blue']\n\n// Destructuring Objects\nlet person = {\n  name: 'Priya',\n  age: 22,\n  city: 'Mumbai',\n  country: 'India'\n};\n\n// Old way\nlet personName = person.name;\nlet personAge = person.age;\n\n// New way\nlet { name, age, city } = person;\nconsole.log(name);  // Priya\nconsole.log(age);   // 22\n\n// Rename variables\nlet { name: userName, age: userAge } = person;\n\n// Default values\nlet { name, salary = 50000 } = person;\nconsole.log(salary);  // 50000 (default)\n\n// Nested destructuring\nlet user = {\n  id: 1,\n  info: {\n    name: 'Amit',\n    email: 'amit@example.com'\n  }\n};\n\nlet { info: { name, email } } = user;",
+          "codeLanguage": "javascript",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Spread and Rest Operators",
+              "code": "// Spread Operator (...) - expands array/object\n\n// Array spread\nlet arr1 = [1, 2, 3];\nlet arr2 = [4, 5, 6];\nlet combined = [...arr1, ...arr2];\nconsole.log(combined);  // [1, 2, 3, 4, 5, 6]\n\n// Copy array\nlet original = [1, 2, 3];\nlet copy = [...original];\n\n// Add elements\nlet numbers = [1, 2, 3];\nlet moreNumbers = [0, ...numbers, 4, 5];\n// [0, 1, 2, 3, 4, 5]\n\n// Object spread\nlet person = { name: 'Raj', age: 25 };\nlet employee = { ...person, salary: 50000 };\nconsole.log(employee);\n// { name: 'Raj', age: 25, salary: 50000 }\n\n// Merge objects\nlet obj1 = { a: 1, b: 2 };\nlet obj2 = { c: 3, d: 4 };\nlet merged = { ...obj1, ...obj2 };\n\n// Rest Operator - collects remaining elements\nfunction sum(...numbers) {\n  return numbers.reduce((total, num) => total + num, 0);\n}\n\nconsole.log(sum(1, 2, 3, 4, 5));  // 15\n\n// Rest in destructuring\nlet [first, ...rest] = [1, 2, 3, 4, 5];\nconsole.log(first);  // 1\nconsole.log(rest);   // [2, 3, 4, 5]",
+              "explanation": "Spread operator expands arrays/objects, while rest operator collects multiple elements into an array."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

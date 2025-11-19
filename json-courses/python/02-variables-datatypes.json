@@ -1,0 +1,66 @@
+{
+  "subjects": [{
+    "name": "Python Complete Course",
+    "slug": "python-complete",
+    "description": "Master Python variables and data types",
+    "icon": "🐍",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Variables and Data Types",
+      "slug": "python-variables-datatypes",
+      "description": "Understanding Python variables, data types, type conversion, and type checking",
+      "order": 2,
+      "estimatedTime": 35,
+      "difficulty": "easy",
+      "contents": [
+        {
+          "title": "Variables in Python",
+          "type": "text",
+          "content": "Variables are containers for storing data values. Python has no command for declaring a variable - it's created when you assign a value.\n\nKey Points:\n• No declaration needed (unlike Java/C++)\n• No type specification required\n• Type is determined automatically\n• Can change type after assignment\n• Use descriptive names\n• Follow naming conventions\n\nVariable Assignment:\n• Use = operator\n• Variable name on left, value on right\n• Can assign multiple variables at once\n• Can assign same value to multiple variables\n\nVariable Naming Rules:\n• Start with letter or underscore\n• Can contain letters, numbers, underscores\n• Case-sensitive (age ≠ Age)\n• Cannot use Python keywords\n• Use snake_case for variables\n\nBest Practices:\n• Use meaningful names (user_age not x)\n• Avoid single letters (except in loops)\n• Use lowercase for variables\n• Use UPPERCASE for constants\n• Don't use Python built-in names",
+          "order": 1
+        },
+        {
+          "title": "Creating Variables",
+          "type": "code",
+          "content": "# Simple variable assignment\nname = 'Raj Sharma'\nage = 25\nheight = 5.9\nis_student = True\n\nprint(name)      # Raj Sharma\nprint(age)       # 25\nprint(height)    # 5.9\nprint(is_student)  # True\n\n# Multiple assignment\nx, y, z = 10, 20, 30\nprint(x, y, z)  # 10 20 30\n\n# Same value to multiple variables\na = b = c = 100\nprint(a, b, c)  # 100 100 100\n\n# Swapping variables\nx = 5\ny = 10\nx, y = y, x  # Swap\nprint(x, y)  # 10 5\n\n# Variable reassignment\ncount = 10\nprint(count)  # 10\ncount = 20\nprint(count)  # 20\n\n# Changing type\nvalue = 100      # int\nvalue = 'Hello'  # now string\nvalue = 3.14     # now float\n\n# Constants (by convention, not enforced)\nPI = 3.14159\nMAX_SIZE = 1000\nAPI_KEY = 'abc123'\n\n# Unpacking\nfruits = ['Apple', 'Banana', 'Mango']\nfirst, second, third = fruits\nprint(first)   # Apple\nprint(second)  # Banana",
+          "codeLanguage": "python",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Variable Naming Examples",
+              "code": "# Good variable names\nuser_name = 'Priya'\nuser_age = 22\ntotal_price = 999.99\nis_active = True\nitem_count = 5\n\n# Bad variable names (but valid)\nx = 'Priya'  # Not descriptive\na = 22       # What is 'a'?\ntp = 999.99  # Unclear abbreviation\n\n# Constants\nMAX_LOGIN_ATTEMPTS = 3\nDEFAULT_TIMEOUT = 30\nAPI_URL = 'https://api.example.com'\n\n# Private variables (convention)\n_internal_value = 100\n_private_key = 'secret'\n\n# Invalid names (will cause error)\n# 2name = 'Error'  # Can't start with number\n# my-name = 'Error'  # Can't use hyphen\n# for = 'Error'  # Can't use keyword",
+              "explanation": "Use descriptive names that explain what the variable stores. Follow Python naming conventions for better code readability."
+            }
+          ]
+        },
+        {
+          "title": "Python Data Types",
+          "type": "text",
+          "content": "Python has several built-in data types to store different kinds of information.\n\nNumeric Types:\n• int: Whole numbers (1, 42, -10, 1000000)\n• float: Decimal numbers (3.14, -0.5, 2.0)\n• complex: Complex numbers (3+4j)\n\nSequence Types:\n• str: Text/strings ('hello', \"world\")\n• list: Ordered, mutable collection [1, 2, 3]\n• tuple: Ordered, immutable collection (1, 2, 3)\n\nMapping Type:\n• dict: Key-value pairs {'name': 'Raj', 'age': 25}\n\nSet Types:\n• set: Unordered, unique elements {1, 2, 3}\n• frozenset: Immutable set\n\nBoolean Type:\n• bool: True or False\n\nBinary Types:\n• bytes: Immutable byte sequence\n• bytearray: Mutable byte sequence\n\nNone Type:\n• None: Represents absence of value\n\nType Characteristics:\n• Mutable: Can be changed (list, dict, set)\n• Immutable: Cannot be changed (int, float, str, tuple)",
+          "order": 3
+        },
+        {
+          "title": "Working with Data Types",
+          "type": "code",
+          "content": "# Integer (int)\nage = 25\ncount = 100\nnegative = -50\nlarge_number = 1000000\n\nprint(type(age))  # <class 'int'>\n\n# Float\nprice = 99.99\npi = 3.14159\ntemperature = -5.5\nscientific = 2.5e3  # 2500.0\n\nprint(type(price))  # <class 'float'>\n\n# String (str)\nname = 'Raj Sharma'\ncity = \"Mumbai\"\nmultiline = '''This is\na multiline\nstring'''\n\nprint(type(name))  # <class 'str'>\n\n# Boolean (bool)\nis_active = True\nhas_permission = False\n\nprint(type(is_active))  # <class 'bool'>\n\n# List (mutable)\nfruits = ['Apple', 'Banana', 'Mango']\nnumbers = [1, 2, 3, 4, 5]\nmixed = [1, 'Hello', 3.14, True]\n\nprint(type(fruits))  # <class 'list'>\n\n# Tuple (immutable)\ncoordinates = (10, 20)\ncolors = ('red', 'green', 'blue')\n\nprint(type(coordinates))  # <class 'tuple'>\n\n# Dictionary (dict)\nperson = {\n    'name': 'Priya',\n    'age': 22,\n    'city': 'Delhi'\n}\n\nprint(type(person))  # <class 'dict'>\n\n# Set (unique elements)\nunique_numbers = {1, 2, 3, 4, 5}\nfruits_set = {'apple', 'banana', 'mango'}\n\nprint(type(unique_numbers))  # <class 'set'>\n\n# None\nresult = None\nprint(type(result))  # <class 'NoneType'>",
+          "codeLanguage": "python",
+          "order": 4,
+          "examples": [
+            {
+              "title": "Type Checking",
+              "code": "# Check type using type()\nage = 25\nprint(type(age))  # <class 'int'>\n\nname = 'Raj'\nprint(type(name))  # <class 'str'>\n\n# Check if variable is of specific type\nage = 25\nprint(isinstance(age, int))     # True\nprint(isinstance(age, str))     # False\n\nfruits = ['apple', 'banana']\nprint(isinstance(fruits, list))  # True\nprint(isinstance(fruits, tuple)) # False\n\n# Check multiple types\nvalue = 3.14\nprint(isinstance(value, (int, float)))  # True\n\n# Practical use\ndef process_data(data):\n    if isinstance(data, str):\n        print('Processing string:', data.upper())\n    elif isinstance(data, int):\n        print('Processing number:', data * 2)\n    elif isinstance(data, list):\n        print('Processing list:', len(data), 'items')\n\nprocess_data('hello')  # Processing string: HELLO\nprocess_data(10)       # Processing number: 20\nprocess_data([1,2,3])  # Processing list: 3 items",
+              "explanation": "Use type() to get the type of a variable and isinstance() to check if a variable is of a specific type."
+            },
+            {
+              "title": "Type Conversion (Casting)",
+              "code": "# String to Integer\nage_str = '25'\nage_int = int(age_str)\nprint(age_int)       # 25\nprint(type(age_int)) # <class 'int'>\n\n# String to Float\nprice_str = '99.99'\nprice_float = float(price_str)\nprint(price_float)  # 99.99\n\n# Integer to String\ncount = 100\ncount_str = str(count)\nprint(count_str)       # '100'\nprint(type(count_str)) # <class 'str'>\n\n# Float to Integer (truncates decimal)\nprice = 99.99\nprice_int = int(price)\nprint(price_int)  # 99 (not 100!)\n\n# String to Boolean\nprint(bool('Hello'))  # True (non-empty string)\nprint(bool(''))       # False (empty string)\nprint(bool(0))        # False\nprint(bool(1))        # True\n\n# List to Tuple\nfruits_list = ['apple', 'banana']\nfruits_tuple = tuple(fruits_list)\nprint(fruits_tuple)  # ('apple', 'banana')\n\n# Tuple to List\ncolors_tuple = ('red', 'green')\ncolors_list = list(colors_tuple)\nprint(colors_list)  # ['red', 'green']\n\n# String to List\ntext = 'Hello'\nchars = list(text)\nprint(chars)  # ['H', 'e', 'l', 'l', 'o']\n\n# Handling conversion errors\ntry:\n    num = int('abc')  # ValueError\nexcept ValueError:\n    print('Cannot convert to integer!')",
+              "explanation": "Type conversion (casting) allows you to convert one data type to another. Use int(), float(), str(), bool(), list(), tuple() functions."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

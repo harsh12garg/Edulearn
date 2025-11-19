@@ -1,0 +1,45 @@
+{
+  "subjects": [
+    {
+      "name": "JavaScript Complete Course",
+      "slug": "javascript-complete",
+      "description": "Master JavaScript operators and expressions",
+      "icon": "🟨",
+      "category": "programming",
+      "level": "all",
+      "order": 1,
+      "topics": [
+        {
+          "title": "Operators in JavaScript",
+          "slug": "js-operators",
+          "description": "Understanding all types of operators - arithmetic, comparison, logical, and more",
+          "order": 3,
+          "estimatedTime": 35,
+          "difficulty": "easy",
+          "contents": [
+            {
+              "title": "Arithmetic Operators",
+              "type": "text",
+              "content": "Arithmetic operators perform mathematical operations on numbers.\n\nBasic Operators:\n• + (Addition): Adds two numbers\n• - (Subtraction): Subtracts second from first\n• * (Multiplication): Multiplies two numbers\n• / (Division): Divides first by second\n• % (Modulus): Returns remainder of division\n• ** (Exponentiation): Raises first to power of second\n\nUnary Operators:\n• ++ (Increment): Increases value by 1\n• -- (Decrement): Decreases value by 1\n• + (Unary plus): Converts to number\n• - (Unary minus): Negates the value\n\nOperator Precedence:\n1. Parentheses ()\n2. Exponentiation **\n3. Multiplication *, Division /, Modulus %\n4. Addition +, Subtraction -",
+              "order": 1
+            },
+            {
+              "title": "Arithmetic Examples",
+              "type": "code",
+              "content": "// Basic arithmetic\nlet a = 10;\nlet b = 3;\n\nconsole.log(a + b);   // 13 (Addition)\nconsole.log(a - b);   // 7  (Subtraction)\nconsole.log(a * b);   // 30 (Multiplication)\nconsole.log(a / b);   // 3.333... (Division)\nconsole.log(a % b);   // 1  (Modulus - remainder)\nconsole.log(a ** b);  // 1000 (10^3 - Exponentiation)\n\n// Increment and Decrement\nlet count = 5;\nconsole.log(count++);  // 5 (post-increment: use then increase)\nconsole.log(count);    // 6\n\nlet num = 5;\nconsole.log(++num);    // 6 (pre-increment: increase then use)\nconsole.log(num);      // 6\n\nlet score = 10;\nconsole.log(score--);  // 10 (post-decrement)\nconsole.log(score);    // 9\n\n// Unary operators\nlet x = '5';\nconsole.log(+x);       // 5 (converts string to number)\nconsole.log(-x);       // -5 (negates)\n\n// Operator precedence\nlet result = 2 + 3 * 4;        // 14 (not 20)\nlet result2 = (2 + 3) * 4;     // 20 (parentheses first)\nlet result3 = 10 + 5 * 2 ** 3; // 50 (** then * then +)",
+              "codeLanguage": "javascript",
+              "order": 2,
+              "examples": [
+                {
+                  "title": "Real-world Arithmetic",
+                  "code": "// Calculate total price with tax\nlet price = 1000;\nlet taxRate = 0.18;  // 18% GST\nlet tax = price * taxRate;\nlet total = price + tax;\nconsole.log('Price:', price);\nconsole.log('Tax:', tax);\nconsole.log('Total:', total);  // 1180\n\n// Calculate discount\nlet originalPrice = 5000;\nlet discountPercent = 20;\nlet discount = originalPrice * (discountPercent / 100);\nlet finalPrice = originalPrice - discount;\nconsole.log('Final Price:', finalPrice);  // 4000\n\n// Calculate average\nlet marks1 = 85, marks2 = 90, marks3 = 78;\nlet average = (marks1 + marks2 + marks3) / 3;\nconsole.log('Average:', average.toFixed(2));  // 84.33",
+                  "explanation": "Arithmetic operators are used in real calculations like pricing, discounts, averages, and more."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

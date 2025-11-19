@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "Python Complete Course",
+    "slug": "python-complete",
+    "icon": "🐍",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Python Strings",
+      "slug": "python-strings",
+      "description": "Master string operations, formatting, methods, and string manipulation in Python",
+      "order": 4,
+      "estimatedTime": 45,
+      "difficulty": "easy",
+      "contents": [
+        {
+          "title": "Introduction to Strings",
+          "type": "text",
+          "content": "Strings are sequences of characters used to store text. In Python, strings are immutable (cannot be changed after creation).\n\nString Features:\n• Enclosed in quotes (single, double, or triple)\n• Immutable (cannot modify existing string)\n• Indexed (access characters by position)\n• Iterable (can loop through characters)\n• Support many built-in methods\n\nCreating Strings:\n• Single quotes: 'Hello'\n• Double quotes: \"Hello\"\n• Triple quotes: '''Hello''' or \"\"\"Hello\"\"\"\n• Triple quotes for multi-line strings\n\nString Characteristics:\n• Zero-indexed (first character at index 0)\n• Support negative indexing (-1 for last)\n• Can be concatenated with +\n• Can be repeated with *\n• Support slicing [start:end]\n\nCommon Use Cases:\n• Store names, addresses, messages\n• Process text data\n• Format output\n• Parse user input\n• Work with files and APIs",
+          "order": 1
+        },
+        {
+          "title": "Creating and Accessing Strings",
+          "type": "code",
+          "content": "# Creating strings\nname = 'Raj Sharma'\ncity = \"Mumbai\"\nmessage = '''This is a\nmulti-line\nstring'''\n\nprint(name)     # Raj Sharma\nprint(city)     # Mumbai\nprint(message)  # Multi-line output\n\n# Quotes inside strings\ntext1 = \"He said, 'Hello!'\"\ntext2 = 'She said, \"Hi!\"'\ntext3 = \"She said, \\\"Hello!\\\"\"  # Escape quote\n\nprint(text1)\nprint(text2)\nprint(text3)\n\n# String indexing (accessing characters)\ntext = 'Python'\nprint(text[0])   # P (first character)\nprint(text[1])   # y\nprint(text[5])   # n (last character)\n# print(text[6])  # IndexError\n\n# Negative indexing (from end)\nprint(text[-1])  # n (last)\nprint(text[-2])  # o (second last)\nprint(text[-6])  # P (first)\n\n# String length\nname = 'Priya'\nprint(len(name))  # 5\n\ntext = 'Hello World'\nprint(len(text))  # 11 (space counts!)\n\n# String slicing [start:end:step]\ntext = 'Python Programming'\n\nprint(text[0:6])    # Python (0 to 5)\nprint(text[7:18])   # Programming\nprint(text[:6])     # Python (start to 5)\nprint(text[7:])     # Programming (7 to end)\nprint(text[:])      # Python Programming (full)\n\n# Slicing with step\nprint(text[::2])    # Pto rgamn (every 2nd char)\nprint(text[::-1])   # gnimmargorP nohtyP (reverse)\n\n# Negative slicing\nprint(text[-11:])   # Programming\nprint(text[:-12])   # Python",
+          "codeLanguage": "python",
+          "order": 2,
+          "examples": [
+            {
+              "title": "String Concatenation and Repetition",
+              "code": "# Concatenation with +\nfirst_name = 'Raj'\nlast_name = 'Sharma'\nfull_name = first_name + ' ' + last_name\nprint(full_name)  # Raj Sharma\n\n# Multiple concatenation\ngreeting = 'Hello' + ', ' + 'World' + '!'\nprint(greeting)  # Hello, World!\n\n# Concatenation with numbers (need conversion)\nage = 25\n# message = 'Age: ' + age  # TypeError\nmessage = 'Age: ' + str(age)  # Convert to string\nprint(message)  # Age: 25\n\n# String repetition with *\nline = '-' * 20\nprint(line)  # --------------------\n\npattern = 'Ha' * 3\nprint(pattern)  # HaHaHa\n\nspaces = ' ' * 5\nprint('Hello' + spaces + 'World')  # Hello     World\n\n# Practical examples\nprint('=' * 30)\nprint('Welcome to Python')\nprint('=' * 30)\n\n# Create separator\nprint('\\n' + '-' * 40 + '\\n')\n\n# Repeat pattern\nstars = '*' * 10\nprint(stars)\nprint('  Title  ')\nprint(stars)",
+              "explanation": "Use + to join strings and * to repeat strings. Remember to convert numbers to strings before concatenation."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

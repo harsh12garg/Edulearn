@@ -1,0 +1,62 @@
+{
+  "subjects": [
+    {
+      "name": "JavaScript Complete Course",
+      "slug": "javascript-complete",
+      "description": "Master JavaScript from basics to advanced with detailed examples and explanations",
+      "icon": "🟨",
+      "category": "programming",
+      "level": "all",
+      "order": 1,
+      "topics": [
+        {
+          "title": "Introduction to JavaScript",
+          "slug": "js-introduction",
+          "description": "Understanding JavaScript fundamentals and its role in modern web development",
+          "order": 1,
+          "estimatedTime": 20,
+          "difficulty": "easy",
+          "contents": [
+            {
+              "title": "What is JavaScript?",
+              "type": "text",
+              "content": "JavaScript is a high-level, interpreted programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.\n\nHistory:\n• Created by Brendan Eich in 1995 at Netscape\n• Originally called LiveScript, renamed to JavaScript for marketing\n• Standardized as ECMAScript (ES)\n• Latest version: ES2023 (ES14)\n\nKey Characteristics:\n• Interpreted language (no compilation needed)\n• Dynamically typed (types determined at runtime)\n• Prototype-based object-oriented\n• First-class functions\n• Event-driven and asynchronous\n• Single-threaded with event loop\n\nWhere JavaScript Runs:\n• Web Browsers (Chrome, Firefox, Safari, Edge)\n• Servers (Node.js, Deno, Bun)\n• Mobile Apps (React Native, Ionic)\n• Desktop Apps (Electron)\n• IoT Devices (Johnny-Five)\n\nWhy Learn JavaScript?\n• Most popular programming language (GitHub, Stack Overflow)\n• Essential for web development\n• Full-stack development possible (MERN, MEAN)\n• Huge job market demand\n• Active community and ecosystem\n• Easy to learn for beginners",
+              "order": 1
+            },
+            {
+              "title": "JavaScript vs Other Languages",
+              "type": "text",
+              "content": "JavaScript vs Java:\n• Completely different languages\n• JavaScript: interpreted, dynamically typed\n• Java: compiled, statically typed\n• JavaScript: prototype-based\n• Java: class-based\n\nJavaScript vs Python:\n• Both are high-level, interpreted\n• JavaScript: primarily for web\n• Python: general-purpose\n• JavaScript: event-driven\n• Python: procedural/OOP\n\nJavaScript vs TypeScript:\n• TypeScript is a superset of JavaScript\n• TypeScript adds static typing\n• TypeScript compiles to JavaScript\n• TypeScript better for large projects",
+              "order": 2
+            },
+            {
+              "title": "Your First JavaScript Program",
+              "type": "code",
+              "content": "// This is a single-line comment\n\n/* This is a\n   multi-line comment */\n\n// Print to console\nconsole.log('Hello, World!');\nconsole.log('Welcome to JavaScript!');\n\n// Basic arithmetic\nconsole.log(2 + 2);        // 4\nconsole.log(10 - 5);       // 5\nconsole.log(3 * 4);        // 12\nconsole.log(20 / 4);       // 5\n\n// Variables\nlet name = 'Raj';\nlet age = 25;\nlet isStudent = true;\n\nconsole.log('Name:', name);\nconsole.log('Age:', age);\nconsole.log('Is Student:', isStudent);",
+              "codeLanguage": "javascript",
+              "order": 3,
+              "examples": [
+                {
+                  "title": "Console Output Methods",
+                  "code": "// Different console methods\nconsole.log('Normal log');\nconsole.info('Information message');\nconsole.warn('Warning message');\nconsole.error('Error message');\n\n// Logging multiple values\nconsole.log('Name:', 'Priya', 'Age:', 22);\n\n// String concatenation\nconsole.log('Hello' + ' ' + 'World');\n\n// Template literals (modern way)\nconsole.log(`Hello ${'World'}`);",
+                  "explanation": "console.log() is the most common way to output data in JavaScript. You can log strings, numbers, variables, and multiple values at once."
+                },
+                {
+                  "title": "Running JavaScript",
+                  "code": "// In Browser Console:\n// 1. Open DevTools (F12 or Ctrl+Shift+I)\n// 2. Go to Console tab\n// 3. Type JavaScript code\n// 4. Press Enter\n\n// In HTML file:\n// <script>\n//   console.log('Hello from HTML');\n// </script>\n\n// External JS file:\n// <script src=\"script.js\"></script>",
+                  "explanation": "JavaScript can run in browser console, inside HTML <script> tags, or in external .js files linked to HTML."
+                }
+              ]
+            },
+            {
+              "title": "JavaScript Syntax Rules",
+              "type": "text",
+              "content": "Basic Syntax Rules:\n\n1. Case Sensitive:\n   • myVariable and MyVariable are different\n   • console.log() not Console.Log()\n\n2. Semicolons:\n   • Optional but recommended\n   • let x = 5; (with semicolon)\n   • let x = 5  (without semicolon)\n\n3. Whitespace:\n   • Ignored by JavaScript\n   • Use for readability\n\n4. Naming Conventions:\n   • camelCase for variables: myVariableName\n   • PascalCase for classes: MyClassName\n   • UPPERCASE for constants: MAX_VALUE\n\n5. Reserved Keywords:\n   • Cannot use: if, else, for, while, function, etc.\n   • Full list: break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, function, if, import, in, instanceof, let, new, return, super, switch, this, throw, try, typeof, var, void, while, with, yield\n\n6. Identifiers:\n   • Must start with letter, $, or _\n   • Can contain letters, digits, $, _\n   • Cannot start with digit",
+              "order": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

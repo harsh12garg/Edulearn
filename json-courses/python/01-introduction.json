@@ -1,0 +1,78 @@
+{
+  "subjects": [
+    {
+      "name": "Python Complete Course",
+      "slug": "python-complete",
+      "description": "Master Python from basics to advanced with detailed examples and real-world projects",
+      "icon": "🐍",
+      "category": "programming",
+      "level": "all",
+      "order": 1,
+      "topics": [
+        {
+          "title": "Introduction to Python",
+          "slug": "python-introduction",
+          "description": "Understanding Python fundamentals, installation, and your first program",
+          "order": 1,
+          "estimatedTime": 25,
+          "difficulty": "easy",
+          "contents": [
+            {
+              "title": "What is Python?",
+              "type": "text",
+              "content": "Python is a high-level, interpreted, general-purpose programming language created by Guido van Rossum in 1991.\n\nKey Features:\n• Easy to Learn: Simple, readable syntax\n• Interpreted: No compilation needed\n• Dynamically Typed: No need to declare variable types\n• Object-Oriented: Supports OOP concepts\n• Extensive Libraries: Rich standard library\n• Cross-Platform: Works on Windows, Mac, Linux\n• Free and Open Source: No licensing costs\n\nWhy Python is Popular:\n• Used by Google, Netflix, Instagram, NASA\n• #1 language for Data Science and AI\n• Great for beginners and experts\n• Huge community support\n• Versatile - web, data, automation, etc.\n\nPython Applications:\n• Web Development (Django, Flask)\n• Data Science & Machine Learning\n• Automation & Scripting\n• Game Development\n• Desktop Applications\n• Scientific Computing\n• IoT and Robotics",
+              "order": 1
+            },
+            {
+              "title": "Python vs Other Languages",
+              "type": "text",
+              "content": "Python vs JavaScript:\n• Python: General-purpose, backend-focused\n• JavaScript: Web-focused, frontend & backend\n• Python: Easier syntax for beginners\n• JavaScript: Essential for web development\n\nPython vs Java:\n• Python: Dynamically typed, less verbose\n• Java: Statically typed, more verbose\n• Python: Faster development\n• Java: Better performance for large apps\n\nPython vs C++:\n• Python: High-level, slower execution\n• C++: Low-level, faster execution\n• Python: Easier to learn and write\n• C++: More control over system resources\n\nPython Versions:\n• Python 2.x: Legacy (deprecated)\n• Python 3.x: Current (use this!)\n• Latest: Python 3.12 (as of 2024)\n• Always use Python 3.x for new projects",
+              "order": 2
+            },
+            {
+              "title": "Installing Python",
+              "type": "text",
+              "content": "Installation Steps:\n\nWindows:\n1. Visit python.org\n2. Download Python 3.x installer\n3. Run installer\n4. Check 'Add Python to PATH'\n5. Click 'Install Now'\n6. Verify: Open CMD, type 'python --version'\n\nMac:\n1. Python 2.x comes pre-installed\n2. Install Python 3 from python.org\n3. Or use Homebrew: brew install python3\n4. Verify: Terminal, type 'python3 --version'\n\nLinux (Ubuntu/Debian):\n1. Usually pre-installed\n2. Update: sudo apt update\n3. Install: sudo apt install python3\n4. Verify: python3 --version\n\nIDEs and Editors:\n• PyCharm (Professional IDE)\n• VS Code (Lightweight, popular)\n• Jupyter Notebook (Data Science)\n• IDLE (Comes with Python)\n• Sublime Text, Atom (Text editors)",
+              "order": 3
+            },
+            {
+              "title": "Your First Python Program",
+              "type": "code",
+              "content": "# This is a comment in Python\n# Comments start with # symbol\n\n# Print to console\nprint('Hello, World!')\nprint('Welcome to Python Programming!')\n\n# Print multiple items\nprint('Python', 'is', 'awesome!')\n\n# Print with separator\nprint('Apple', 'Banana', 'Mango', sep=', ')\n\n# Print numbers\nprint(10)\nprint(3.14)\nprint(2 + 3)  # Output: 5\n\n# Print without newline\nprint('Hello', end=' ')\nprint('World')  # Output: Hello World\n\n# Multi-line strings\nprint('''\nThis is a\nmulti-line\nstring\n''')\n\n# Escape characters\nprint('Hello\\nWorld')  # \\n = newline\nprint('Hello\\tWorld')  # \\t = tab\nprint('She said, \"Python is great!\"')  # Quotes inside string",
+              "codeLanguage": "python",
+              "order": 4,
+              "examples": [
+                {
+                  "title": "Interactive Python Shell",
+                  "code": "# Open terminal/command prompt\n# Type: python3 (or python)\n# You'll see: >>>\n\n>>> print('Hello')\nHello\n\n>>> 2 + 2\n4\n\n>>> name = 'Raj'\n>>> print(f'My name is {name}')\nMy name is Raj\n\n# Exit: type exit() or Ctrl+D",
+                  "explanation": "Python interactive shell (REPL) lets you test code immediately. Great for learning and quick experiments."
+                },
+                {
+                  "title": "Running Python Files",
+                  "code": "# Create a file: hello.py\n# Add this code:\n\nprint('Hello from Python file!')\nname = input('Enter your name: ')\nprint(f'Welcome, {name}!')\n\n# Run in terminal:\n# python3 hello.py\n# or\n# python hello.py",
+                  "explanation": "Save Python code in .py files and run them from terminal. This is how you create Python programs."
+                },
+                {
+                  "title": "Python Syntax Rules",
+                  "code": "# Python uses INDENTATION (spaces/tabs)\n# No curly braces like JavaScript/Java\n\n# Correct indentation\nif True:\n    print('This is indented')  # 4 spaces\n    print('Same level')\n\n# Wrong indentation causes error\n# if True:\n# print('Error!')  # IndentationError\n\n# Use 4 spaces (recommended)\n# Don't mix tabs and spaces\n\n# Case sensitive\nname = 'Raj'\nName = 'Priya'  # Different variable\nprint(name)  # Raj\nprint(Name)  # Priya",
+                  "explanation": "Python uses indentation to define code blocks. Always use 4 spaces for indentation. Python is case-sensitive."
+                },
+                {
+                  "title": "Getting User Input",
+                  "code": "# input() function gets user input as string\nname = input('Enter your name: ')\nprint('Hello, ' + name + '!')\n\n# Convert input to integer\nage = int(input('Enter your age: '))\nprint(f'You are {age} years old')\n\n# Convert input to float\nprice = float(input('Enter price: '))\nprint(f'Price: ₹{price}')\n\n# Multiple inputs\nname = input('Name: ')\nage = input('Age: ')\ncity = input('City: ')\nprint(f'{name}, {age}, from {city}')",
+                  "explanation": "input() function reads user input as a string. Use int() or float() to convert to numbers."
+                }
+              ]
+            },
+            {
+              "title": "Python Keywords and Identifiers",
+              "type": "text",
+              "content": "Python Keywords (Reserved Words):\nYou cannot use these as variable names:\n\nand, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield\n\nIdentifier Rules:\n• Must start with letter (a-z, A-Z) or underscore (_)\n• Can contain letters, digits (0-9), underscore\n• Cannot start with digit\n• Case-sensitive (age and Age are different)\n• Cannot be a keyword\n\nNaming Conventions:\n• Variables: lowercase_with_underscores\n• Constants: UPPERCASE_WITH_UNDERSCORES\n• Functions: lowercase_with_underscores\n• Classes: CapitalizedWords (PascalCase)\n• Private: _leading_underscore\n\nExamples:\n✅ Valid: name, age, user_name, _private, name123\n❌ Invalid: 123name, my-name, for, class",
+              "order": 5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

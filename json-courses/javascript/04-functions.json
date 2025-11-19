@@ -1,0 +1,41 @@
+{
+  "subjects": [{
+    "name": "JavaScript Complete Course",
+    "slug": "javascript-complete",
+    "description": "Master JavaScript functions",
+    "icon": "🟨",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Functions in JavaScript",
+      "slug": "js-functions",
+      "description": "Understanding functions, parameters, return values, arrow functions, and closures",
+      "order": 4,
+      "estimatedTime": 40,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "What are Functions?",
+          "type": "text",
+          "content": "Functions are reusable blocks of code that perform specific tasks. They are fundamental building blocks in JavaScript.\n\nWhy Use Functions?\n• Code Reusability: Write once, use many times\n• Organization: Break complex problems into smaller parts\n• Maintainability: Easier to update and debug\n• Abstraction: Hide implementation details\n• Testing: Easier to test individual functions\n\nTypes of Functions:\n1. Function Declaration\n2. Function Expression\n3. Arrow Function\n4. Anonymous Function\n5. IIFE (Immediately Invoked Function Expression)\n6. Generator Function\n7. Async Function\n\nFunction Components:\n• Name: Identifier for the function\n• Parameters: Input values (optional)\n• Body: Code to execute\n• Return: Output value (optional)",
+          "order": 1
+        },
+        {
+          "title": "Function Declaration",
+          "type": "code",
+          "content": "// Basic function declaration\nfunction greet() {\n  console.log('Hello, World!');\n}\n\n// Calling the function\ngreet();  // Output: Hello, World!\n\n// Function with parameters\nfunction greetUser(name) {\n  console.log('Hello, ' + name + '!');\n}\n\ngreetUser('Raj');    // Hello, Raj!\ngreetUser('Priya');  // Hello, Priya!\n\n// Function with multiple parameters\nfunction add(a, b) {\n  return a + b;\n}\n\nlet sum = add(5, 3);\nconsole.log(sum);  // 8\n\n// Function with default parameters\nfunction greetWithTime(name, time = 'day') {\n  console.log(`Good ${time}, ${name}!`);\n}\n\ngreetWithTime('Amit');           // Good day, Amit!\ngreetWithTime('Priya', 'morning');  // Good morning, Priya!\n\n// Function with return value\nfunction multiply(x, y) {\n  return x * y;\n}\n\nlet result = multiply(4, 5);\nconsole.log(result);  // 20\n\n// Multiple return statements\nfunction checkAge(age) {\n  if (age >= 18) {\n    return 'Adult';\n  } else {\n    return 'Minor';\n  }\n}\n\nconsole.log(checkAge(25));  // Adult\nconsole.log(checkAge(15));  // Minor",
+          "codeLanguage": "javascript",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Function with Rest Parameters",
+              "code": "// Rest parameters (...) collect remaining arguments\nfunction sum(...numbers) {\n  let total = 0;\n  for (let num of numbers) {\n    total += num;\n  }\n  return total;\n}\n\nconsole.log(sum(1, 2, 3));        // 6\nconsole.log(sum(1, 2, 3, 4, 5));  // 15\nconsole.log(sum(10, 20));         // 30\n\n// Combining regular and rest parameters\nfunction introduce(firstName, lastName, ...hobbies) {\n  console.log(`Name: ${firstName} ${lastName}`);\n  console.log('Hobbies:', hobbies.join(', '));\n}\n\nintroduce('Raj', 'Sharma', 'Cricket', 'Reading', 'Coding');",
+              "explanation": "Rest parameters allow functions to accept unlimited arguments as an array."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

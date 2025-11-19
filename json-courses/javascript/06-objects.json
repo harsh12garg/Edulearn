@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "JavaScript Complete Course",
+    "slug": "javascript-complete",
+    "icon": "🟨",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Objects in JavaScript",
+      "slug": "js-objects",
+      "description": "Understanding objects, properties, methods, this keyword, and object-oriented programming",
+      "order": 6,
+      "estimatedTime": 50,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Introduction to Objects",
+          "type": "text",
+          "content": "Objects are collections of key-value pairs. They are the foundation of JavaScript and used to represent real-world entities.\n\nKey Concepts:\n• Properties: Data stored in objects (key-value pairs)\n• Methods: Functions stored in objects\n• this keyword: Refers to current object\n• Prototypes: Inheritance mechanism\n• Constructor functions: Create multiple objects\n• Classes: Modern syntax for OOP\n\nObject Characteristics:\n• Unordered collection\n• Keys are strings or symbols\n• Values can be any type\n• Mutable (can be changed)\n• Passed by reference\n\nWhen to Use Objects:\n• Represent entities (user, product, etc.)\n• Group related data\n• Create structured data\n• Implement OOP concepts\n• Store configuration settings",
+          "order": 1
+        },
+        {
+          "title": "Creating and Using Objects",
+          "type": "code",
+          "content": "// Object literal (most common)\nlet person = {\n  name: 'Raj Sharma',\n  age: 25,\n  city: 'Mumbai',\n  isStudent: true\n};\n\n// Accessing properties\nconsole.log(person.name);   // Raj Sharma (dot notation)\nconsole.log(person['age']); // 25 (bracket notation)\n\n// Adding properties\nperson.email = 'raj@example.com';\nperson['phone'] = '9876543210';\n\n// Modifying properties\nperson.age = 26;\nperson['city'] = 'Delhi';\n\n// Deleting properties\ndelete person.isStudent;\n\n// Checking if property exists\nconsole.log('name' in person);    // true\nconsole.log('salary' in person);  // false\n\n// Object with methods\nlet calculator = {\n  add: function(a, b) {\n    return a + b;\n  },\n  subtract: function(a, b) {\n    return a - b;\n  },\n  // Shorthand method syntax\n  multiply(a, b) {\n    return a * b;\n  }\n};\n\nconsole.log(calculator.add(5, 3));       // 8\nconsole.log(calculator.multiply(4, 2));  // 8\n\n// Nested objects\nlet user = {\n  name: 'Priya',\n  address: {\n    street: 'MG Road',\n    city: 'Bangalore',\n    pincode: 560001\n  },\n  hobbies: ['Reading', 'Coding', 'Music']\n};\n\nconsole.log(user.address.city);     // Bangalore\nconsole.log(user.hobbies[0]);       // Reading",
+          "codeLanguage": "javascript",
+          "order": 2,
+          "examples": [
+            {
+              "title": "this Keyword",
+              "code": "let person = {\n  firstName: 'Amit',\n  lastName: 'Kumar',\n  age: 30,\n  \n  // Method using this\n  getFullName: function() {\n    return this.firstName + ' ' + this.lastName;\n  },\n  \n  // Arrow function doesn't have own this\n  greet: function() {\n    console.log(`Hello, I am ${this.firstName}`);\n  },\n  \n  // Method to modify object\n  haveBirthday: function() {\n    this.age++;\n    console.log(`Happy Birthday! Now ${this.age} years old`);\n  }\n};\n\nconsole.log(person.getFullName());  // Amit Kumar\nperson.greet();                     // Hello, I am Amit\nperson.haveBirthday();              // Happy Birthday! Now 31 years old",
+              "explanation": "The 'this' keyword refers to the object that is executing the current function. It allows methods to access other properties of the same object."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

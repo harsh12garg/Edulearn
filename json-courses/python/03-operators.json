@@ -1,0 +1,54 @@
+{
+  "subjects": [{
+    "name": "Python Complete Course",
+    "slug": "python-complete",
+    "icon": "🐍",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Python Operators",
+      "slug": "python-operators",
+      "description": "Master all Python operators - arithmetic, comparison, logical, bitwise, and more",
+      "order": 3,
+      "estimatedTime": 40,
+      "difficulty": "easy",
+      "contents": [
+        {
+          "title": "Types of Operators in Python",
+          "type": "text",
+          "content": "Python supports various types of operators to perform different operations.\n\nOperator Categories:\n\n1. Arithmetic Operators:\n   • Basic math operations\n   • +, -, *, /, //, %, **\n\n2. Comparison (Relational) Operators:\n   • Compare two values\n   • ==, !=, >, <, >=, <=\n\n3. Logical Operators:\n   • Combine conditions\n   • and, or, not\n\n4. Assignment Operators:\n   • Assign values\n   • =, +=, -=, *=, /=, etc.\n\n5. Identity Operators:\n   • Check object identity\n   • is, is not\n\n6. Membership Operators:\n   • Check membership\n   • in, not in\n\n7. Bitwise Operators:\n   • Bit-level operations\n   • &, |, ^, ~, <<, >>\n\nOperator Precedence (High to Low):\n1. ** (Exponentiation)\n2. *, /, //, % (Multiplication, Division)\n3. +, - (Addition, Subtraction)\n4. Comparison operators\n5. Logical operators",
+          "order": 1
+        },
+        {
+          "title": "Arithmetic Operators",
+          "type": "code",
+          "content": "# Addition (+)\nresult = 10 + 5\nprint(result)  # 15\n\n# Subtraction (-)\nresult = 20 - 8\nprint(result)  # 12\n\n# Multiplication (*)\nresult = 6 * 7\nprint(result)  # 42\n\n# Division (/) - always returns float\nresult = 15 / 3\nprint(result)  # 5.0 (float, not int!)\n\nresult = 10 / 3\nprint(result)  # 3.3333333333333335\n\n# Floor Division (//) - returns integer\nresult = 10 // 3\nprint(result)  # 3 (removes decimal)\n\nresult = 15 // 4\nprint(result)  # 3\n\n# Modulus (%) - returns remainder\nresult = 10 % 3\nprint(result)  # 1 (remainder)\n\nresult = 15 % 4\nprint(result)  # 3\n\n# Exponentiation (**) - power\nresult = 2 ** 3\nprint(result)  # 8 (2^3)\n\nresult = 5 ** 2\nprint(result)  # 25 (5^2)\n\n# Unary operators\nnum = 10\nprint(+num)  # 10 (positive)\nprint(-num)  # -10 (negative)\n\n# Complex expressions\nresult = 2 + 3 * 4\nprint(result)  # 14 (not 20, * has higher precedence)\n\nresult = (2 + 3) * 4\nprint(result)  # 20 (parentheses first)\n\nresult = 10 + 5 * 2 ** 3\nprint(result)  # 50 (** then * then +)",
+          "codeLanguage": "python",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Real-world Arithmetic Examples",
+              "code": "# Calculate total price with GST\nprice = 1000\ngst_rate = 18  # 18%\ngst_amount = price * gst_rate / 100\ntotal = price + gst_amount\n\nprint(f'Price: ₹{price}')\nprint(f'GST ({gst_rate}%): ₹{gst_amount}')\nprint(f'Total: ₹{total}')  # ₹1180.0\n\n# Calculate discount\noriginal_price = 5000\ndiscount_percent = 20\ndiscount = original_price * discount_percent / 100\nfinal_price = original_price - discount\n\nprint(f'Original: ₹{original_price}')\nprint(f'Discount: ₹{discount}')\nprint(f'Final: ₹{final_price}')  # ₹4000.0\n\n# Calculate average marks\nmath = 85\nscience = 90\nenglish = 78\ntotal_marks = math + science + english\naverage = total_marks / 3\n\nprint(f'Total: {total_marks}')\nprint(f'Average: {average:.2f}')  # 84.33\n\n# Check even or odd using modulus\nnumber = 17\nif number % 2 == 0:\n    print(f'{number} is even')\nelse:\n    print(f'{number} is odd')  # 17 is odd\n\n# Calculate compound interest\nprincipal = 10000\nrate = 10  # 10% per year\ntime = 2   # 2 years\namount = principal * (1 + rate/100) ** time\ninterest = amount - principal\n\nprint(f'Principal: ₹{principal}')\nprint(f'Amount: ₹{amount:.2f}')\nprint(f'Interest: ₹{interest:.2f}')",
+              "explanation": "Arithmetic operators are used in real calculations like pricing, discounts, averages, interest calculations, and more."
+            }
+          ]
+        },
+        {
+          "title": "Comparison and Logical Operators",
+          "type": "code",
+          "content": "# Comparison Operators\na = 10\nb = 20\n\n# Equal to (==)\nprint(a == b)  # False\nprint(10 == 10)  # True\n\n# Not equal to (!=)\nprint(a != b)  # True\nprint(10 != 10)  # False\n\n# Greater than (>)\nprint(a > b)  # False\nprint(20 > 10)  # True\n\n# Less than (<)\nprint(a < b)  # True\nprint(20 < 10)  # False\n\n# Greater than or equal to (>=)\nprint(a >= 10)  # True\nprint(a >= 20)  # False\n\n# Less than or equal to (<=)\nprint(b <= 20)  # True\nprint(b <= 10)  # False\n\n# Logical Operators\n# and - both conditions must be True\nage = 25\nhas_license = True\n\ncan_drive = age >= 18 and has_license\nprint(can_drive)  # True\n\nprint(True and True)    # True\nprint(True and False)   # False\nprint(False and False)  # False\n\n# or - at least one condition must be True\nis_weekend = False\nis_holiday = True\n\ncan_relax = is_weekend or is_holiday\nprint(can_relax)  # True\n\nprint(True or True)    # True\nprint(True or False)   # True\nprint(False or False)  # False\n\n# not - reverses the condition\nis_raining = False\nprint(not is_raining)  # True\n\nprint(not True)   # False\nprint(not False)  # True\n\n# Complex conditions\nage = 25\nincome = 50000\nhas_job = True\n\neligible = (age >= 21 and age <= 60) and (income > 30000 or has_job)\nprint(eligible)  # True",
+          "codeLanguage": "python",
+          "order": 3,
+          "examples": [
+            {
+              "title": "Practical Comparison Examples",
+              "code": "# Login validation\nusername = 'admin'\npassword = 'pass123'\n\ninput_user = 'admin'\ninput_pass = 'pass123'\n\nif input_user == username and input_pass == password:\n    print('Login successful!')\nelse:\n    print('Invalid credentials')\n\n# Age verification\nage = 17\n\nif age >= 18:\n    print('You can vote')\nelse:\n    print('You cannot vote yet')\n\n# Grade calculation\nmarks = 85\n\nif marks >= 90:\n    grade = 'A+'\nelif marks >= 80:\n    grade = 'A'\nelif marks >= 70:\n    grade = 'B'\nelif marks >= 60:\n    grade = 'C'\nelse:\n    grade = 'F'\n\nprint(f'Marks: {marks}, Grade: {grade}')\n\n# Discount eligibility\npurchase_amount = 5000\nis_member = True\n\nif purchase_amount >= 3000 or is_member:\n    discount = 20\nelse:\n    discount = 0\n\nprint(f'Discount: {discount}%')\n\n# Temperature check\ntemp = 35\n\nif temp > 30:\n    print('Hot weather')\nelif temp > 20:\n    print('Pleasant weather')\nelif temp > 10:\n    print('Cold weather')\nelse:\n    print('Very cold')",
+              "explanation": "Comparison and logical operators are essential for decision-making in programs. Use them in if statements, loops, and conditions."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

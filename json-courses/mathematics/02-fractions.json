@@ -1,0 +1,85 @@
+{
+  "subjects": [{
+    "name": "Mathematics Complete Course",
+    "slug": "mathematics-complete",
+    "icon": "🔢",
+    "category": "mathematics",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Fractions and Decimals",
+      "slug": "fractions-decimals",
+      "description": "Understanding fractions, types, operations, and conversion to decimals",
+      "order": 2,
+      "estimatedTime": 50,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Introduction to Fractions",
+          "type": "text",
+          "content": "A fraction represents a part of a whole. It consists of two numbers separated by a line.\n\nParts of a Fraction:\n• Numerator: Top number (parts we have)\n• Denominator: Bottom number (total parts)\n• Example: In 3/4, numerator = 3, denominator = 4\n\nTypes of Fractions:\n\n1. Proper Fraction:\n   • Numerator < Denominator\n   • Value < 1\n   • Examples: 1/2, 3/4, 5/8, 7/10\n\n2. Improper Fraction:\n   • Numerator ≥ Denominator\n   • Value ≥ 1\n   • Examples: 5/3, 7/4, 9/5, 11/8\n\n3. Mixed Fraction:\n   • Whole number + Proper fraction\n   • Examples: 2 1/2, 3 3/4, 5 2/3\n\n4. Like Fractions:\n   • Same denominator\n   • Examples: 1/5, 2/5, 3/5, 4/5\n\n5. Unlike Fractions:\n   • Different denominators\n   • Examples: 1/2, 2/3, 3/4, 4/5\n\n6. Equivalent Fractions:\n   • Same value, different form\n   • Examples: 1/2 = 2/4 = 3/6 = 4/8\n\n7. Unit Fraction:\n   • Numerator is 1\n   • Examples: 1/2, 1/3, 1/4, 1/5",
+          "order": 1
+        },
+        {
+          "title": "Converting Between Fraction Types",
+          "type": "code",
+          "content": "Converting Improper to Mixed Fraction:\n\nExample 1: Convert 17/5 to mixed fraction\nStep 1: Divide numerator by denominator\n17 ÷ 5 = 3 remainder 2\nStep 2: Quotient = whole number, Remainder = new numerator\nAnswer: 3 2/5\n\nExample 2: Convert 23/4 to mixed fraction\n23 ÷ 4 = 5 remainder 3\nAnswer: 5 3/4\n\nConverting Mixed to Improper Fraction:\n\nExample 1: Convert 4 2/3 to improper fraction\nStep 1: Multiply whole number by denominator\n4 × 3 = 12\nStep 2: Add numerator\n12 + 2 = 14\nStep 3: Keep same denominator\nAnswer: 14/3\n\nExample 2: Convert 5 3/8 to improper fraction\n(5 × 8) + 3 = 40 + 3 = 43\nAnswer: 43/8\n\nFinding Equivalent Fractions:\n\nExample: Find 3 equivalent fractions of 2/3\nMultiply both numerator and denominator by same number:\n2/3 = (2×2)/(3×2) = 4/6\n2/3 = (2×3)/(3×3) = 6/9\n2/3 = (2×4)/(3×4) = 8/12\n\nAnswer: 4/6, 6/9, 8/12",
+          "codeLanguage": "text",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Simplifying Fractions",
+              "code": "Simplify 24/36 to lowest terms\n\nMethod 1: Find HCF\nFactors of 24: 1, 2, 3, 4, 6, 8, 12, 24\nFactors of 36: 1, 2, 3, 4, 6, 9, 12, 18, 36\nHCF = 12\n\nDivide both by HCF:\n24 ÷ 12 = 2\n36 ÷ 12 = 3\nAnswer: 2/3\n\nMethod 2: Successive Division\n24/36 = (24÷2)/(36÷2) = 12/18\n12/18 = (12÷2)/(18÷2) = 6/9\n6/9 = (6÷3)/(9÷3) = 2/3\nAnswer: 2/3",
+              "explanation": "Always simplify fractions to lowest terms by dividing both numerator and denominator by their HCF."
+            }
+          ]
+        },
+        {
+          "title": "Addition and Subtraction of Fractions",
+          "type": "text",
+          "content": "Rules for Adding/Subtracting Fractions:\n\n1. Like Fractions (Same Denominator):\n   • Add/subtract numerators\n   • Keep denominator same\n   • Simplify if needed\n\n2. Unlike Fractions (Different Denominators):\n   • Find LCM of denominators\n   • Convert to equivalent fractions\n   • Add/subtract numerators\n   • Simplify if needed\n\n3. Mixed Fractions:\n   • Method 1: Convert to improper fractions first\n   • Method 2: Add/subtract whole numbers and fractions separately\n\nSteps for Unlike Fractions:\n1. Find LCM of denominators\n2. Convert each fraction to equivalent fraction with LCM as denominator\n3. Add/subtract numerators\n4. Write result over common denominator\n5. Simplify if possible",
+          "order": 3
+        },
+        {
+          "title": "Addition Examples",
+          "type": "code",
+          "content": "Example 1: Like Fractions\n3/7 + 2/7 = ?\n\nSolution:\nSame denominator, so add numerators:\n(3 + 2)/7 = 5/7\nAnswer: 5/7\n\nExample 2: Unlike Fractions\n1/3 + 1/4 = ?\n\nSolution:\nStep 1: Find LCM of 3 and 4\nLCM(3, 4) = 12\n\nStep 2: Convert to equivalent fractions\n1/3 = (1×4)/(3×4) = 4/12\n1/4 = (1×3)/(4×3) = 3/12\n\nStep 3: Add\n4/12 + 3/12 = 7/12\n\nAnswer: 7/12\n\nExample 3: Mixed Fractions\n2 1/3 + 1 1/4 = ?\n\nMethod 1: Convert to improper\n2 1/3 = 7/3\n1 1/4 = 5/4\n\nLCM(3, 4) = 12\n7/3 = 28/12\n5/4 = 15/12\n\n28/12 + 15/12 = 43/12 = 3 7/12\n\nAnswer: 3 7/12",
+          "codeLanguage": "text",
+          "order": 4,
+          "examples": [
+            {
+              "title": "Word Problem - Addition",
+              "code": "Problem: Priya ate 1/4 of a pizza and Raj ate 1/3 of the same pizza. What fraction of the pizza did they eat together?\n\nSolution:\nPriya's share = 1/4\nRaj's share = 1/3\nTotal = 1/4 + 1/3\n\nLCM(4, 3) = 12\n1/4 = 3/12\n1/3 = 4/12\n\nTotal = 3/12 + 4/12 = 7/12\n\nAnswer: They ate 7/12 of the pizza together.",
+              "explanation": "In real-life problems, fractions represent parts of a whole. Addition combines these parts."
+            }
+          ]
+        },
+        {
+          "title": "Multiplication and Division of Fractions",
+          "type": "text",
+          "content": "Multiplication of Fractions:\n\nRule: Multiply numerators together and denominators together\nFormula: a/b × c/d = (a×c)/(b×d)\n\nSteps:\n1. Multiply numerators\n2. Multiply denominators\n3. Simplify if possible\n4. Can simplify before multiplying (cross-cancellation)\n\nDivision of Fractions:\n\nRule: Multiply by reciprocal (flip the second fraction)\nFormula: a/b ÷ c/d = a/b × d/c\n\nSteps:\n1. Keep first fraction as is\n2. Change ÷ to ×\n3. Flip the second fraction (reciprocal)\n4. Multiply as usual\n5. Simplify\n\nReciprocal:\n• Flip numerator and denominator\n• Reciprocal of 3/4 is 4/3\n• Reciprocal of 5 is 1/5\n• Reciprocal of 1/7 is 7",
+          "order": 5
+        },
+        {
+          "title": "Multiplication and Division Examples",
+          "type": "code",
+          "content": "Multiplication Examples:\n\nExample 1: Simple Multiplication\n2/3 × 3/5 = ?\n\nSolution:\nMultiply numerators: 2 × 3 = 6\nMultiply denominators: 3 × 5 = 15\nAnswer: 6/15 = 2/5 (simplified)\n\nExample 2: With Cross-Cancellation\n4/9 × 3/8 = ?\n\nCross-cancel:\n4 and 8 have HCF 4: 4/8 = 1/2\n3 and 9 have HCF 3: 3/9 = 1/3\n\nNow multiply: 1/3 × 1/2 = 1/6\nAnswer: 1/6\n\nDivision Examples:\n\nExample 1: Simple Division\n3/4 ÷ 2/5 = ?\n\nSolution:\nFlip second fraction: 2/5 becomes 5/2\nMultiply: 3/4 × 5/2\n= (3×5)/(4×2)\n= 15/8\n= 1 7/8\n\nAnswer: 1 7/8\n\nExample 2: Dividing by Whole Number\n5/6 ÷ 3 = ?\n\nSolution:\nWrite 3 as 3/1\nFlip: 3/1 becomes 1/3\nMultiply: 5/6 × 1/3 = 5/18\n\nAnswer: 5/18",
+          "codeLanguage": "text",
+          "order": 6,
+          "examples": [
+            {
+              "title": "Word Problem - Multiplication",
+              "code": "Problem: A recipe needs 2/3 cup of sugar. If you want to make 1/2 of the recipe, how much sugar do you need?\n\nSolution:\nOriginal sugar = 2/3 cup\nMake half = 1/2 of 2/3\n= 1/2 × 2/3\n= (1×2)/(2×3)\n= 2/6\n= 1/3 cup\n\nAnswer: You need 1/3 cup of sugar.",
+              "explanation": "'Of' in fractions means multiplication. 1/2 of 2/3 means 1/2 × 2/3."
+            },
+            {
+              "title": "Word Problem - Division",
+              "code": "Problem: A 3/4 meter ribbon is cut into pieces of 1/8 meter each. How many pieces can be made?\n\nSolution:\nTotal ribbon = 3/4 meter\nEach piece = 1/8 meter\nNumber of pieces = 3/4 ÷ 1/8\n\n= 3/4 × 8/1\n= (3×8)/(4×1)\n= 24/4\n= 6\n\nAnswer: 6 pieces can be made.",
+              "explanation": "Division tells us how many times one quantity fits into another."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

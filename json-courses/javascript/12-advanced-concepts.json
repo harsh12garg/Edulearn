@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "JavaScript Complete Course",
+    "slug": "javascript-complete",
+    "icon": "🟨",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Advanced JavaScript Concepts",
+      "slug": "js-advanced",
+      "description": "Master closures, prototypes, this keyword, call/apply/bind, and advanced patterns",
+      "order": 12,
+      "estimatedTime": 65,
+      "difficulty": "hard",
+      "contents": [
+        {
+          "title": "Closures",
+          "type": "text",
+          "content": "A closure is a function that has access to variables in its outer (enclosing) function's scope, even after the outer function has returned.\n\nKey Points:\n• Inner function remembers outer function's variables\n• Creates private variables\n• Maintains state between function calls\n• Fundamental to JavaScript\n• Used in callbacks, event handlers\n\nWhy Closures Matter:\n• Data Privacy: Create private variables\n• Factory Functions: Generate customized functions\n• Callbacks: Maintain context\n• Module Pattern: Encapsulation\n• Memoization: Cache results\n\nClosure Use Cases:\n• Event handlers\n• setTimeout/setInterval\n• Array methods (map, filter, etc.)\n• Module pattern\n• Currying\n• Partial application",
+          "order": 1
+        },
+        {
+          "title": "Closure Examples",
+          "type": "code",
+          "content": "// Basic closure\nfunction outer() {\n  let count = 0;  // Private variable\n  \n  function inner() {\n    count++;\n    console.log(count);\n  }\n  \n  return inner;\n}\n\nlet counter = outer();\ncounter();  // 1\ncounter();  // 2\ncounter();  // 3\n// count is preserved between calls!\n\n// Closure with parameters\nfunction createMultiplier(multiplier) {\n  return function(number) {\n    return number * multiplier;\n  };\n}\n\nlet double = createMultiplier(2);\nlet triple = createMultiplier(3);\n\nconsole.log(double(5));  // 10\nconsole.log(triple(5));  // 15\n\n// Private variables using closure\nfunction createBankAccount(initialBalance) {\n  let balance = initialBalance;  // Private\n  \n  return {\n    deposit: function(amount) {\n      balance += amount;\n      return balance;\n    },\n    withdraw: function(amount) {\n      if (amount <= balance) {\n        balance -= amount;\n        return balance;\n      }\n      return 'Insufficient funds';\n    },\n    getBalance: function() {\n      return balance;\n    }\n  };\n}\n\nlet account = createBankAccount(1000);\nconsole.log(account.deposit(500));    // 1500\nconsole.log(account.withdraw(200));   // 1300\nconsole.log(account.getBalance());    // 1300\n// console.log(account.balance);      // undefined (private!)\n\n// Closure in loops (common interview question)\n// Wrong way\nfor (var i = 1; i <= 3; i++) {\n  setTimeout(function() {\n    console.log(i);  // Prints 4, 4, 4\n  }, 1000);\n}\n\n// Right way (using closure)\nfor (var i = 1; i <= 3; i++) {\n  (function(j) {\n    setTimeout(function() {\n      console.log(j);  // Prints 1, 2, 3\n    }, 1000);\n  })(i);\n}\n\n// Or use let (block scope)\nfor (let i = 1; i <= 3; i++) {\n  setTimeout(function() {\n    console.log(i);  // Prints 1, 2, 3\n  }, 1000);\n}",
+          "codeLanguage": "javascript",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Prototypes and Inheritance",
+              "code": "// Every object has a prototype\nlet obj = {};\nconsole.log(obj.__proto__);  // Object.prototype\n\n// Constructor function\nfunction Person(name, age) {\n  this.name = name;\n  this.age = age;\n}\n\n// Add method to prototype\nPerson.prototype.greet = function() {\n  return `Hello, I'm ${this.name}`;\n};\n\nPerson.prototype.haveBirthday = function() {\n  this.age++;\n};\n\nlet person1 = new Person('Raj', 25);\nlet person2 = new Person('Priya', 22);\n\nconsole.log(person1.greet());  // Hello, I'm Raj\nperson1.haveBirthday();\nconsole.log(person1.age);      // 26\n\n// Prototype chain\nconsole.log(person1.__proto__ === Person.prototype);  // true\nconsole.log(Person.prototype.__proto__ === Object.prototype);  // true\n\n// Inheritance\nfunction Student(name, age, course) {\n  Person.call(this, name, age);  // Call parent constructor\n  this.course = course;\n}\n\n// Set up prototype chain\nStudent.prototype = Object.create(Person.prototype);\nStudent.prototype.constructor = Student;\n\n// Add Student-specific method\nStudent.prototype.study = function() {\n  return `${this.name} is studying ${this.course}`;\n};\n\nlet student = new Student('Amit', 20, 'JavaScript');\nconsole.log(student.greet());  // Hello, I'm Amit (inherited)\nconsole.log(student.study());  // Amit is studying JavaScript",
+              "explanation": "Prototypes enable inheritance in JavaScript. Methods on prototype are shared across all instances, saving memory."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

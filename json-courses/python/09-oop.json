@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "Python Complete Course",
+    "slug": "python-complete",
+    "icon": "🐍",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Object-Oriented Programming (OOP)",
+      "slug": "python-oop",
+      "description": "Master classes, objects, inheritance, encapsulation, polymorphism, and OOP concepts",
+      "order": 9,
+      "estimatedTime": 60,
+      "difficulty": "hard",
+      "contents": [
+        {
+          "title": "Introduction to OOP",
+          "type": "text",
+          "content": "Object-Oriented Programming is a programming paradigm based on objects that contain data and code.\n\nOOP Concepts:\n\n1. Class:\n   • Blueprint for creating objects\n   • Defines attributes and methods\n   • Template for objects\n\n2. Object:\n   • Instance of a class\n   • Has state (attributes) and behavior (methods)\n   • Real-world entity\n\n3. Encapsulation:\n   • Bundle data and methods together\n   • Hide internal details\n   • Use private/public access\n\n4. Inheritance:\n   • Create new class from existing class\n   • Reuse code\n   • Parent-child relationship\n\n5. Polymorphism:\n   • Same method, different behavior\n   • Method overriding\n   • Duck typing\n\n6. Abstraction:\n   • Hide complex implementation\n   • Show only essential features\n   • Abstract classes\n\nWhy OOP:\n• Code reusability\n• Better organization\n• Easier maintenance\n• Real-world modeling\n• Modularity",
+          "order": 1
+        },
+        {
+          "title": "Classes and Objects",
+          "type": "code",
+          "content": "# Creating a class\nclass Person:\n    # Constructor (__init__ method)\n    def __init__(self, name, age):\n        self.name = name  # Instance variable\n        self.age = age\n    \n    # Instance method\n    def greet(self):\n        print(f'Hello, I am {self.name}')\n    \n    def have_birthday(self):\n        self.age += 1\n        print(f'Happy Birthday! Now {self.age} years old')\n\n# Creating objects (instances)\nperson1 = Person('Raj', 25)\nperson2 = Person('Priya', 22)\n\n# Accessing attributes\nprint(person1.name)  # Raj\nprint(person2.age)   # 22\n\n# Calling methods\nperson1.greet()  # Hello, I am Raj\nperson2.greet()  # Hello, I am Priya\n\nperson1.have_birthday()  # Happy Birthday! Now 26 years old\n\n# Class with more features\nclass BankAccount:\n    # Class variable (shared by all instances)\n    bank_name = 'State Bank'\n    \n    def __init__(self, account_holder, balance=0):\n        self.account_holder = account_holder\n        self.balance = balance\n        self.transactions = []\n    \n    def deposit(self, amount):\n        if amount > 0:\n            self.balance += amount\n            self.transactions.append(f'Deposit: +{amount}')\n            print(f'Deposited ₹{amount}. New balance: ₹{self.balance}')\n        else:\n            print('Invalid amount')\n    \n    def withdraw(self, amount):\n        if amount > 0 and amount <= self.balance:\n            self.balance -= amount\n            self.transactions.append(f'Withdrawal: -{amount}')\n            print(f'Withdrawn ₹{amount}. New balance: ₹{self.balance}')\n        else:\n            print('Insufficient funds or invalid amount')\n    \n    def get_balance(self):\n        return self.balance\n    \n    def show_transactions(self):\n        print('Transaction History:')\n        for transaction in self.transactions:\n            print(f'  {transaction}')\n\n# Using the class\naccount = BankAccount('Raj Sharma', 1000)\naccount.deposit(500)   # Deposited ₹500\naccount.withdraw(200)  # Withdrawn ₹200\nprint(f'Balance: ₹{account.get_balance()}')  # Balance: ₹1300\naccount.show_transactions()",
+          "codeLanguage": "python",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Inheritance",
+              "code": "# Parent class\nclass Animal:\n    def __init__(self, name, species):\n        self.name = name\n        self.species = species\n    \n    def make_sound(self):\n        print('Some generic sound')\n    \n    def info(self):\n        print(f'{self.name} is a {self.species}')\n\n# Child class inheriting from Animal\nclass Dog(Animal):\n    def __init__(self, name, breed):\n        super().__init__(name, 'Dog')  # Call parent constructor\n        self.breed = breed\n    \n    # Method overriding\n    def make_sound(self):\n        print('Woof! Woof!')\n    \n    # New method specific to Dog\n    def fetch(self):\n        print(f'{self.name} is fetching the ball!')\n\nclass Cat(Animal):\n    def __init__(self, name, color):\n        super().__init__(name, 'Cat')\n        self.color = color\n    \n    def make_sound(self):\n        print('Meow! Meow!')\n\n# Using inheritance\ndog = Dog('Buddy', 'Golden Retriever')\ndog.info()        # Buddy is a Dog (inherited)\ndog.make_sound()  # Woof! Woof! (overridden)\ndog.fetch()       # Buddy is fetching the ball!\n\ncat = Cat('Whiskers', 'White')\ncat.info()        # Whiskers is a Cat\ncat.make_sound()  # Meow! Meow!\n\n# Check inheritance\nprint(isinstance(dog, Dog))     # True\nprint(isinstance(dog, Animal))  # True\nprint(isinstance(dog, Cat))     # False",
+              "explanation": "Inheritance allows creating new classes based on existing classes. Child classes inherit attributes and methods from parent classes and can override them."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

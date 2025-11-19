@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "Python Complete Course",
+    "slug": "python-complete",
+    "icon": "🐍",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Python Functions",
+      "slug": "python-functions",
+      "description": "Master functions, parameters, return values, lambda functions, decorators, and advanced concepts",
+      "order": 6,
+      "estimatedTime": 55,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Introduction to Functions",
+          "type": "text",
+          "content": "Functions are reusable blocks of code that perform specific tasks. They help organize code and avoid repetition.\n\nWhy Use Functions:\n• Code Reusability: Write once, use many times\n• Organization: Break complex problems into smaller parts\n• Maintainability: Easier to update and debug\n• Abstraction: Hide implementation details\n• Testing: Easier to test individual functions\n• Modularity: Create independent modules\n\nFunction Components:\n• def keyword: Defines a function\n• Function name: Identifier for the function\n• Parameters: Input values (optional)\n• Docstring: Documentation (optional)\n• Body: Code to execute\n• return: Output value (optional)\n\nFunction Types:\n• Built-in functions: print(), len(), type()\n• User-defined functions: Created by programmer\n• Lambda functions: Anonymous functions\n• Recursive functions: Call themselves\n• Generator functions: Yield values\n\nFunction Scope:\n• Local scope: Variables inside function\n• Global scope: Variables outside function\n• Enclosing scope: Nested functions\n• Built-in scope: Python built-ins",
+          "order": 1
+        },
+        {
+          "title": "Creating and Calling Functions",
+          "type": "code",
+          "content": "# Basic function definition\ndef greet():\n    print('Hello, World!')\n\n# Calling the function\ngreet()  # Output: Hello, World!\n\n# Function with parameters\ndef greet_user(name):\n    print(f'Hello, {name}!')\n\ngreet_user('Raj')    # Hello, Raj!\ngreet_user('Priya')  # Hello, Priya!\n\n# Function with multiple parameters\ndef add(a, b):\n    result = a + b\n    print(f'{a} + {b} = {result}')\n\nadd(5, 3)   # 5 + 3 = 8\nadd(10, 20) # 10 + 20 = 30\n\n# Function with return value\ndef multiply(x, y):\n    return x * y\n\nresult = multiply(4, 5)\nprint(result)  # 20\n\n# Using returned value\ntotal = multiply(3, 7) + multiply(2, 4)\nprint(total)  # 21 + 8 = 29\n\n# Function with default parameters\ndef greet_with_time(name, time='day'):\n    print(f'Good {time}, {name}!')\n\ngreet_with_time('Amit')           # Good day, Amit!\ngreet_with_time('Priya', 'morning')  # Good morning, Priya!\n\n# Multiple return values\ndef get_user_info():\n    name = 'Raj'\n    age = 25\n    city = 'Mumbai'\n    return name, age, city  # Returns tuple\n\nuser_name, user_age, user_city = get_user_info()\nprint(user_name)  # Raj\nprint(user_age)   # 25\nprint(user_city)  # Mumbai\n\n# Function with docstring\ndef calculate_area(length, width):\n    \"\"\"\n    Calculate area of rectangle.\n    \n    Parameters:\n    length (float): Length of rectangle\n    width (float): Width of rectangle\n    \n    Returns:\n    float: Area of rectangle\n    \"\"\"\n    return length * width\n\narea = calculate_area(10, 5)\nprint(area)  # 50\n\n# View docstring\nprint(calculate_area.__doc__)",
+          "codeLanguage": "python",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Advanced Parameter Types",
+              "code": "# *args - variable number of arguments\ndef sum_all(*numbers):\n    total = 0\n    for num in numbers:\n        total += num\n    return total\n\nprint(sum_all(1, 2, 3))        # 6\nprint(sum_all(1, 2, 3, 4, 5))  # 15\nprint(sum_all(10, 20))         # 30\n\n# **kwargs - keyword arguments\ndef print_info(**info):\n    for key, value in info.items():\n        print(f'{key}: {value}')\n\nprint_info(name='Raj', age=25, city='Mumbai')\n# Output:\n# name: Raj\n# age: 25\n# city: Mumbai\n\n# Combining all parameter types\ndef complex_function(a, b, *args, default=10, **kwargs):\n    print(f'a: {a}')\n    print(f'b: {b}')\n    print(f'args: {args}')\n    print(f'default: {default}')\n    print(f'kwargs: {kwargs}')\n\ncomplex_function(1, 2, 3, 4, 5, default=20, x=100, y=200)\n\n# Keyword-only arguments\ndef create_user(name, *, age, email):\n    print(f'Name: {name}')\n    print(f'Age: {age}')\n    print(f'Email: {email}')\n\n# Must use keywords for age and email\ncreate_user('Raj', age=25, email='raj@example.com')\n# create_user('Raj', 25, 'raj@example.com')  # Error!",
+              "explanation": "*args collects extra positional arguments as tuple. **kwargs collects extra keyword arguments as dictionary. Use them for flexible functions."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

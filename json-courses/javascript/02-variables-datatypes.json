@@ -1,0 +1,50 @@
+{
+  "subjects": [
+    {
+      "name": "JavaScript Complete Course",
+      "slug": "javascript-complete",
+      "description": "Master JavaScript from basics to advanced with detailed examples",
+      "icon": "🟨",
+      "category": "programming",
+      "level": "all",
+      "order": 1,
+      "topics": [
+        {
+          "title": "Variables and Data Types",
+          "slug": "js-variables-datatypes",
+          "description": "Understanding variables, data types, and type conversion in JavaScript",
+          "order": 2,
+          "estimatedTime": 30,
+          "difficulty": "easy",
+          "contents": [
+            {
+              "title": "Variables in JavaScript",
+              "type": "text",
+              "content": "Variables are containers for storing data values. JavaScript has three ways to declare variables:\n\n1. var (old way - avoid using):\n   • Function-scoped\n   • Can be redeclared\n   • Hoisted to top\n   • Can cause bugs\n\n2. let (modern way):\n   • Block-scoped\n   • Cannot be redeclared in same scope\n   • Not hoisted\n   • Use when value will change\n\n3. const (modern way):\n   • Block-scoped\n   • Cannot be reassigned\n   • Must be initialized\n   • Use by default\n\nBest Practices:\n• Use const by default\n• Use let only when you need to reassign\n• Never use var in modern JavaScript\n• Use descriptive variable names\n• Follow camelCase naming convention",
+              "order": 1
+            },
+            {
+              "title": "Variable Declaration Examples",
+              "type": "code",
+              "content": "// Using let (can be reassigned)\nlet age = 25;\nconsole.log(age);  // 25\n\nage = 26;  // Reassignment allowed\nconsole.log(age);  // 26\n\nlet score;  // Declaration without initialization\nscore = 100;  // Assignment later\n\n// Using const (cannot be reassigned)\nconst PI = 3.14159;\nconst siteName = 'EduLearn India';\nconst maxUsers = 1000;\n\nconsole.log(PI);  // 3.14159\n\n// This will cause an error:\n// PI = 3.14;  // TypeError: Assignment to constant variable\n\n// const must be initialized\n// const x;  // SyntaxError: Missing initializer\n\n// Multiple declarations\nlet x = 5, y = 10, z = 15;\nconst a = 1, b = 2, c = 3;\n\n// Destructuring assignment\nlet [first, second] = [10, 20];\nconst {name, email} = {name: 'Raj', email: 'raj@example.com'};",
+              "codeLanguage": "javascript",
+              "order": 2,
+              "examples": [
+                {
+                  "title": "Variable Scope",
+                  "code": "// Global scope\nlet globalVar = 'I am global';\n\nfunction myFunction() {\n  // Function scope\n  let functionVar = 'I am in function';\n  console.log(globalVar);  // Accessible\n  console.log(functionVar);  // Accessible\n}\n\nmyFunction();\n// console.log(functionVar);  // Error: not defined\n\n// Block scope\nif (true) {\n  let blockVar = 'I am in block';\n  const blockConst = 'Me too';\n  console.log(blockVar);  // Accessible\n}\n// console.log(blockVar);  // Error: not defined",
+                  "explanation": "let and const are block-scoped, meaning they only exist within the block {} they are defined in. Global variables are accessible everywhere."
+                },
+                {
+                  "title": "Variable Naming Best Practices",
+                  "code": "// Good variable names (descriptive)\nlet userName = 'Priya';\nlet userAge = 25;\nlet isLoggedIn = true;\nlet totalPrice = 999.99;\nlet itemCount = 5;\n\n// Bad variable names (not descriptive)\nlet x = 'Priya';  // What is x?\nlet a = 25;  // What is a?\nlet flag = true;  // What flag?\n\n// Constants (UPPERCASE)\nconst MAX_LOGIN_ATTEMPTS = 3;\nconst API_URL = 'https://api.example.com';\nconst TAX_RATE = 0.18;\n\n// Boolean variables (use is, has, can)\nlet isActive = true;\nlet hasPermission = false;\nlet canEdit = true;",
+                  "explanation": "Use descriptive names that explain what the variable stores. Use camelCase for regular variables and UPPERCASE for constants."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

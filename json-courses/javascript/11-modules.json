@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "JavaScript Complete Course",
+    "slug": "javascript-complete",
+    "icon": "🟨",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "JavaScript Modules",
+      "slug": "js-modules",
+      "description": "Learn ES6 modules, import/export, module patterns, and code organization",
+      "order": 11,
+      "estimatedTime": 40,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Introduction to Modules",
+          "type": "text",
+          "content": "Modules allow you to break code into separate files and import/export functionality between them.\n\nWhy Use Modules?\n• Code Organization: Split large files\n• Reusability: Use code across projects\n• Maintainability: Easier to update\n• Namespace: Avoid naming conflicts\n• Dependency Management: Clear dependencies\n• Performance: Load only what's needed\n\nModule Types:\n\n1. ES6 Modules (Modern):\n   • Native JavaScript modules\n   • import/export syntax\n   • Supported in modern browsers\n   • Used in React, Vue, etc.\n\n2. CommonJS (Node.js):\n   • require() and module.exports\n   • Used in Node.js\n   • Synchronous loading\n\n3. AMD (Asynchronous Module Definition):\n   • RequireJS\n   • Browser-focused\n   • Less common now\n\nES6 Module Features:\n• Static structure (analyzed before execution)\n• Automatic strict mode\n• Top-level this is undefined\n• File-based scope\n• Asynchronous loading",
+          "order": 1
+        },
+        {
+          "title": "Export and Import",
+          "type": "code",
+          "content": "// ========== math.js ==========\n// Named exports\nexport function add(a, b) {\n  return a + b;\n}\n\nexport function subtract(a, b) {\n  return a - b;\n}\n\nexport const PI = 3.14159;\n\n// Export multiple at once\nfunction multiply(a, b) {\n  return a * b;\n}\n\nfunction divide(a, b) {\n  return a / b;\n}\n\nexport { multiply, divide };\n\n// ========== user.js ==========\n// Default export (one per file)\nexport default class User {\n  constructor(name, email) {\n    this.name = name;\n    this.email = email;\n  }\n  \n  greet() {\n    return `Hello, I'm ${this.name}`;\n  }\n}\n\n// Can have both default and named exports\nexport const userRoles = ['admin', 'user', 'guest'];\n\n// ========== app.js ==========\n// Import named exports\nimport { add, subtract, PI } from './math.js';\n\nconsole.log(add(5, 3));      // 8\nconsole.log(subtract(10, 4)); // 6\nconsole.log(PI);              // 3.14159\n\n// Import all as namespace\nimport * as MathUtils from './math.js';\n\nconsole.log(MathUtils.add(2, 3));  // 5\nconsole.log(MathUtils.PI);         // 3.14159\n\n// Import default export\nimport User from './user.js';\n\nlet user = new User('Raj', 'raj@example.com');\nconsole.log(user.greet());\n\n// Import default and named together\nimport User, { userRoles } from './user.js';\n\n// Rename imports\nimport { add as sum, subtract as minus } from './math.js';\n\nconsole.log(sum(5, 3));   // 8\nconsole.log(minus(10, 4)); // 6",
+          "codeLanguage": "javascript",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Real-world Module Structure",
+              "code": "// ========== utils/validation.js ==========\nexport function validateEmail(email) {\n  const regex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;\n  return regex.test(email);\n}\n\nexport function validatePhone(phone) {\n  const regex = /^[0-9]{10}$/;\n  return regex.test(phone);\n}\n\n// ========== utils/formatting.js ==========\nexport function formatCurrency(amount) {\n  return `₹${amount.toLocaleString('en-IN')}`;\n}\n\nexport function formatDate(date) {\n  return new Date(date).toLocaleDateString('en-IN');\n}\n\n// ========== utils/index.js (barrel export) ==========\nexport * from './validation.js';\nexport * from './formatting.js';\n\n// ========== app.js ==========\nimport {\n  validateEmail,\n  validatePhone,\n  formatCurrency,\n  formatDate\n} from './utils/index.js';\n\nconsole.log(validateEmail('raj@example.com'));  // true\nconsole.log(formatCurrency(50000));             // ₹50,000",
+              "explanation": "Organize related functions into separate module files and use barrel exports (index.js) to simplify imports."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

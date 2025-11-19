@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "JavaScript Complete Course",
+    "slug": "javascript-complete",
+    "icon": "🟨",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "DOM Manipulation",
+      "slug": "js-dom",
+      "description": "Master Document Object Model - selecting elements, modifying content, handling events",
+      "order": 7,
+      "estimatedTime": 55,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "What is DOM?",
+          "type": "text",
+          "content": "The Document Object Model (DOM) is a programming interface for HTML documents. It represents the page as a tree structure that JavaScript can manipulate.\n\nKey Concepts:\n• Document: The entire HTML page\n• Element: HTML tags (div, p, h1, etc.)\n• Node: Every part of the document\n• Tree Structure: Parent-child relationships\n• Live Collection: Updates automatically\n\nDOM Tree Structure:\n• document (root)\n  • html\n    • head\n      • title\n      • meta\n    • body\n      • div\n      • p\n      • etc.\n\nWhy Learn DOM?\n• Make pages interactive\n• Respond to user actions\n• Update content dynamically\n• Create single-page applications\n• Build modern web apps\n\nCommon DOM Operations:\n• Selecting elements\n• Modifying content\n• Changing styles\n• Adding/removing elements\n• Handling events",
+          "order": 1
+        },
+        {
+          "title": "Selecting Elements",
+          "type": "code",
+          "content": "// Get element by ID\nlet header = document.getElementById('header');\nconsole.log(header);\n\n// Get elements by class name (returns HTMLCollection)\nlet items = document.getElementsByClassName('item');\nconsole.log(items[0]);  // First element with class 'item'\n\n// Get elements by tag name\nlet paragraphs = document.getElementsByTagName('p');\nconsole.log(paragraphs.length);\n\n// Query selector (CSS selector) - returns first match\nlet firstItem = document.querySelector('.item');\nlet mainDiv = document.querySelector('#main');\nlet firstPara = document.querySelector('p');\n\n// Query selector all - returns NodeList\nlet allItems = document.querySelectorAll('.item');\nlet allParas = document.querySelectorAll('p');\n\n// Advanced selectors\nlet nestedElement = document.querySelector('div.container > p.text');\nlet multipleClasses = document.querySelector('.item.active');\nlet attributeSelector = document.querySelector('[data-id=\"123\"]');\n\n// Traversing DOM\nlet parent = element.parentElement;\nlet children = element.children;\nlet firstChild = element.firstElementChild;\nlet lastChild = element.lastElementChild;\nlet nextSibling = element.nextElementSibling;\nlet prevSibling = element.previousElementSibling;",
+          "codeLanguage": "javascript",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Modifying Content and Styles",
+              "code": "// Change text content\nlet heading = document.querySelector('h1');\nheading.textContent = 'New Heading';\n\n// Change HTML content\nlet div = document.querySelector('.content');\ndiv.innerHTML = '<p>New <strong>HTML</strong> content</p>';\n\n// Change styles\nheading.style.color = 'blue';\nheading.style.fontSize = '32px';\nheading.style.backgroundColor = '#f0f0f0';\n\n// Add/remove classes\nlet button = document.querySelector('.btn');\nbutton.classList.add('active');\nbutton.classList.remove('disabled');\nbutton.classList.toggle('highlight');\n\n// Check if class exists\nif (button.classList.contains('active')) {\n  console.log('Button is active');\n}\n\n// Change attributes\nlet image = document.querySelector('img');\nimage.setAttribute('src', 'new-image.jpg');\nimage.setAttribute('alt', 'New Image');\nlet imgSrc = image.getAttribute('src');\n\n// Create and add elements\nlet newPara = document.createElement('p');\nnewPara.textContent = 'This is a new paragraph';\nnewPara.classList.add('text');\ndocument.body.appendChild(newPara);",
+              "explanation": "DOM manipulation allows you to change any part of the webpage dynamically using JavaScript."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

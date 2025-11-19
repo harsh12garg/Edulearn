@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "Python Complete Course",
+    "slug": "python-complete",
+    "icon": "🐍",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "File Handling in Python",
+      "slug": "python-file-handling",
+      "description": "Master reading, writing, and manipulating files in Python",
+      "order": 8,
+      "estimatedTime": 40,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Introduction to File Handling",
+          "type": "text",
+          "content": "File handling allows you to work with files on your computer - read data, write data, and manipulate files.\n\nWhy File Handling:\n• Store data permanently\n• Read configuration files\n• Process large datasets\n• Log application events\n• Import/export data\n• Work with CSV, JSON, text files\n\nFile Modes:\n• 'r' - Read (default): Open for reading\n• 'w' - Write: Create new or overwrite\n• 'a' - Append: Add to end of file\n• 'x' - Exclusive: Create new file, fail if exists\n• 'r+' - Read and Write\n• 'b' - Binary mode: For images, videos\n• 't' - Text mode (default)\n\nFile Operations:\n1. Open file: open()\n2. Read/Write: read(), write(), readline()\n3. Close file: close()\n4. Use with statement (recommended)\n\nBest Practices:\n• Always close files after use\n• Use 'with' statement (auto-closes)\n• Handle exceptions\n• Check if file exists\n• Use appropriate mode\n• Be careful with 'w' mode (overwrites!)",
+          "order": 1
+        },
+        {
+          "title": "Reading Files",
+          "type": "code",
+          "content": "# Reading entire file\nfile = open('example.txt', 'r')\ncontent = file.read()\nprint(content)\nfile.close()\n\n# Using with statement (recommended)\nwith open('example.txt', 'r') as file:\n    content = file.read()\n    print(content)\n# File automatically closed\n\n# Reading line by line\nwith open('example.txt', 'r') as file:\n    for line in file:\n        print(line.strip())  # strip() removes \\n\n\n# readline() - read one line\nwith open('example.txt', 'r') as file:\n    line1 = file.readline()\n    line2 = file.readline()\n    print(line1)\n    print(line2)\n\n# readlines() - read all lines as list\nwith open('example.txt', 'r') as file:\n    lines = file.readlines()\n    print(lines)  # List of lines\n\n# Read specific number of characters\nwith open('example.txt', 'r') as file:\n    first_10 = file.read(10)  # First 10 characters\n    print(first_10)\n\n# Check if file exists\nimport os\n\nif os.path.exists('example.txt'):\n    with open('example.txt', 'r') as file:\n        content = file.read()\n        print(content)\nelse:\n    print('File not found!')\n\n# Handle file not found error\ntry:\n    with open('nonexistent.txt', 'r') as file:\n        content = file.read()\nexcept FileNotFoundError:\n    print('File does not exist!')\nexcept Exception as e:\n    print(f'Error: {e}')",
+          "codeLanguage": "python",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Writing to Files",
+              "code": "# Write mode ('w') - overwrites file\nwith open('output.txt', 'w') as file:\n    file.write('Hello, World!\\n')\n    file.write('This is Python file handling.\\n')\n\n# Append mode ('a') - adds to end\nwith open('output.txt', 'a') as file:\n    file.write('This line is appended.\\n')\n\n# Write multiple lines\nlines = [\n    'Line 1\\n',\n    'Line 2\\n',\n    'Line 3\\n'\n]\n\nwith open('output.txt', 'w') as file:\n    file.writelines(lines)\n\n# Write list of items\nfruits = ['Apple', 'Banana', 'Mango']\n\nwith open('fruits.txt', 'w') as file:\n    for fruit in fruits:\n        file.write(fruit + '\\n')\n\n# Create file if doesn't exist\nwith open('new_file.txt', 'x') as file:\n    file.write('New file created!')\n\n# Copy file content\nwith open('source.txt', 'r') as source:\n    with open('destination.txt', 'w') as dest:\n        content = source.read()\n        dest.write(content)\n\n# Read and write simultaneously\nwith open('data.txt', 'r+') as file:\n    content = file.read()\n    file.write('\\nNew line added')",
+              "explanation": "Use 'w' to create/overwrite files, 'a' to append, 'x' to create new. Always use 'with' statement to ensure files are properly closed."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

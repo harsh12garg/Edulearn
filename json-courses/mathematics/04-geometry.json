@@ -1,0 +1,86 @@
+{
+  "subjects": [{
+    "name": "Mathematics Complete Course",
+    "slug": "mathematics-complete",
+    "icon": "🔢",
+    "category": "mathematics",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Geometry - Shapes and Measurements",
+      "slug": "geometry-basics",
+      "description": "Understanding 2D and 3D shapes, perimeter, area, and volume calculations",
+      "order": 4,
+      "estimatedTime": 60,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Introduction to Geometry",
+          "type": "text",
+          "content": "Geometry is the branch of mathematics that deals with shapes, sizes, positions, and properties of space.\n\nBasic Geometric Terms:\n\n1. Point:\n   • Exact location in space\n   • No length, width, or height\n   • Represented by a dot\n   • Named with capital letters: A, B, C\n\n2. Line:\n   • Straight path extending infinitely in both directions\n   • No endpoints\n   • Named with two points: Line AB\n\n3. Line Segment:\n   • Part of a line with two endpoints\n   • Has definite length\n   • Example: Segment AB\n\n4. Ray:\n   • Part of a line with one endpoint\n   • Extends infinitely in one direction\n   • Example: Ray AB\n\n5. Angle:\n   • Formed by two rays with common endpoint\n   • Measured in degrees (°)\n   • Common endpoint called vertex\n\nTypes of Angles:\n• Acute Angle: Less than 90°\n• Right Angle: Exactly 90°\n• Obtuse Angle: Between 90° and 180°\n• Straight Angle: Exactly 180°\n• Reflex Angle: Between 180° and 360°\n• Complete Angle: Exactly 360°",
+          "order": 1
+        },
+        {
+          "title": "2D Shapes - Triangles",
+          "type": "text",
+          "content": "Triangle: A polygon with three sides and three angles.\n\nProperties:\n• Sum of all angles = 180°\n• Sum of any two sides > third side\n• Three vertices, three sides, three angles\n\nTypes by Sides:\n1. Equilateral Triangle:\n   • All three sides equal\n   • All angles = 60°\n   • Most symmetric\n\n2. Isosceles Triangle:\n   • Two sides equal\n   • Two angles equal\n   • Base angles are equal\n\n3. Scalene Triangle:\n   • All sides different\n   • All angles different\n   • No symmetry\n\nTypes by Angles:\n1. Acute Triangle:\n   • All angles < 90°\n\n2. Right Triangle:\n   • One angle = 90°\n   • Pythagoras theorem applies\n   • Hypotenuse is longest side\n\n3. Obtuse Triangle:\n   • One angle > 90°\n\nFormulas:\n• Perimeter = Sum of all sides = a + b + c\n• Area = 1/2 × base × height\n• For right triangle: Area = 1/2 × base × perpendicular\n• Pythagoras: a² + b² = c² (for right triangle)",
+          "order": 2
+        },
+        {
+          "title": "Triangle Problems",
+          "type": "code",
+          "content": "Example 1: Finding Missing Angle\nIn a triangle, two angles are 45° and 65°. Find the third angle.\n\nSolution:\nSum of angles in triangle = 180°\nLet third angle = x\n45° + 65° + x = 180°\n110° + x = 180°\nx = 180° - 110°\nx = 70°\n\nAnswer: Third angle = 70°\n\nExample 2: Perimeter of Triangle\nSides of a triangle are 5 cm, 7 cm, and 9 cm. Find perimeter.\n\nSolution:\nPerimeter = Sum of all sides\n= 5 + 7 + 9\n= 21 cm\n\nAnswer: Perimeter = 21 cm\n\nExample 3: Area of Triangle\nBase = 12 cm, Height = 8 cm. Find area.\n\nSolution:\nArea = 1/2 × base × height\n= 1/2 × 12 × 8\n= 1/2 × 96\n= 48 cm²\n\nAnswer: Area = 48 cm²\n\nExample 4: Pythagoras Theorem\nIn a right triangle, base = 3 cm, height = 4 cm. Find hypotenuse.\n\nSolution:\nUsing Pythagoras theorem:\na² + b² = c²\n3² + 4² = c²\n9 + 16 = c²\n25 = c²\nc = √25\nc = 5 cm\n\nAnswer: Hypotenuse = 5 cm",
+          "codeLanguage": "text",
+          "order": 3,
+          "examples": [
+            {
+              "title": "Real-Life Application",
+              "code": "Problem: A ladder 10 meters long leans against a wall. The foot of the ladder is 6 meters from the wall. How high up the wall does the ladder reach?\n\nSolution:\nThis forms a right triangle:\nHypotenuse (ladder) = 10 m\nBase (distance from wall) = 6 m\nHeight (up the wall) = ?\n\nUsing Pythagoras:\nBase² + Height² = Hypotenuse²\n6² + h² = 10²\n36 + h² = 100\nh² = 100 - 36\nh² = 64\nh = 8 m\n\nAnswer: Ladder reaches 8 meters up the wall.",
+              "explanation": "Pythagoras theorem is used in real-life for calculating distances, heights, and diagonal measurements."
+            }
+          ]
+        },
+        {
+          "title": "Quadrilaterals",
+          "type": "text",
+          "content": "Quadrilateral: A polygon with four sides, four angles, and four vertices.\n\nProperties:\n• Sum of all angles = 360°\n• Four sides, four vertices\n\nTypes of Quadrilaterals:\n\n1. Square:\n   • All sides equal\n   • All angles = 90°\n   • Diagonals equal and bisect at 90°\n   • Perimeter = 4 × side\n   • Area = side × side = side²\n\n2. Rectangle:\n   • Opposite sides equal\n   • All angles = 90°\n   • Diagonals equal\n   • Perimeter = 2(length + width)\n   • Area = length × width\n\n3. Parallelogram:\n   • Opposite sides equal and parallel\n   • Opposite angles equal\n   • Diagonals bisect each other\n   • Perimeter = 2(a + b)\n   • Area = base × height\n\n4. Rhombus:\n   • All sides equal\n   • Opposite angles equal\n   • Diagonals bisect at 90°\n   • Perimeter = 4 × side\n   • Area = 1/2 × d₁ × d₂ (d = diagonals)\n\n5. Trapezium:\n   • One pair of parallel sides\n   • Area = 1/2 × (sum of parallel sides) × height\n\n6. Kite:\n   • Two pairs of adjacent sides equal\n   • One diagonal bisects the other at 90°",
+          "order": 4
+        },
+        {
+          "title": "Quadrilateral Problems",
+          "type": "code",
+          "content": "Example 1: Square\nSide of square = 8 cm. Find perimeter and area.\n\nSolution:\nPerimeter = 4 × side\n= 4 × 8\n= 32 cm\n\nArea = side²\n= 8²\n= 64 cm²\n\nAnswer: Perimeter = 32 cm, Area = 64 cm²\n\nExample 2: Rectangle\nLength = 15 cm, Width = 8 cm. Find perimeter and area.\n\nSolution:\nPerimeter = 2(l + w)\n= 2(15 + 8)\n= 2 × 23\n= 46 cm\n\nArea = l × w\n= 15 × 8\n= 120 cm²\n\nAnswer: Perimeter = 46 cm, Area = 120 cm²\n\nExample 3: Rhombus\nDiagonals are 12 cm and 16 cm. Find area.\n\nSolution:\nArea = 1/2 × d₁ × d₂\n= 1/2 × 12 × 16\n= 1/2 × 192\n= 96 cm²\n\nAnswer: Area = 96 cm²\n\nExample 4: Trapezium\nParallel sides are 10 cm and 14 cm, height = 6 cm. Find area.\n\nSolution:\nArea = 1/2 × (a + b) × h\n= 1/2 × (10 + 14) × 6\n= 1/2 × 24 × 6\n= 72 cm²\n\nAnswer: Area = 72 cm²",
+          "codeLanguage": "text",
+          "order": 5,
+          "examples": [
+            {
+              "title": "Word Problem - Garden",
+              "code": "Problem: A rectangular garden is 25 meters long and 15 meters wide. Find:\na) Perimeter (for fencing)\nb) Area (for grass)\n\nSolution:\na) Perimeter = 2(l + w)\n= 2(25 + 15)\n= 2 × 40\n= 80 meters\n\nb) Area = l × w\n= 25 × 15\n= 375 square meters\n\nAnswer:\na) 80 meters of fencing needed\nb) 375 sq meters of grass needed",
+              "explanation": "Perimeter is used for boundaries (fencing, framing). Area is used for covering surfaces (flooring, painting)."
+            }
+          ]
+        },
+        {
+          "title": "Circles",
+          "type": "text",
+          "content": "Circle: A round shape where all points are equidistant from the center.\n\nParts of Circle:\n• Center: Middle point\n• Radius (r): Distance from center to any point on circle\n• Diameter (d): Distance across circle through center\n  - Diameter = 2 × radius\n  - d = 2r\n• Circumference: Perimeter of circle\n• Chord: Line segment joining two points on circle\n• Arc: Part of circumference\n• Sector: Pie-shaped region\n• Segment: Region between chord and arc\n\nFormulas:\n• Circumference = 2πr or πd\n• Area = πr²\n• π (pi) ≈ 3.14 or 22/7\n\nRelationships:\n• Diameter is longest chord\n• Radius = Diameter ÷ 2\n• All radii of same circle are equal\n• Diameter = 2 × Radius\n\nImportant:\n• Use π = 22/7 for exact fractions\n• Use π = 3.14 for decimal answers\n• Always mention units (cm, m, etc.)",
+          "order": 6
+        },
+        {
+          "title": "Circle Problems",
+          "type": "code",
+          "content": "Example 1: Finding Circumference\nRadius = 7 cm. Find circumference.\n\nSolution:\nCircumference = 2πr\n= 2 × 22/7 × 7\n= 2 × 22\n= 44 cm\n\nAnswer: Circumference = 44 cm\n\nExample 2: Finding Area\nRadius = 14 cm. Find area.\n\nSolution:\nArea = πr²\n= 22/7 × 14 × 14\n= 22/7 × 196\n= 22 × 28\n= 616 cm²\n\nAnswer: Area = 616 cm²\n\nExample 3: Finding Radius from Diameter\nDiameter = 28 cm. Find radius, circumference, and area.\n\nSolution:\nRadius = Diameter ÷ 2\n= 28 ÷ 2\n= 14 cm\n\nCircumference = πd\n= 22/7 × 28\n= 88 cm\n\nArea = πr²\n= 22/7 × 14 × 14\n= 616 cm²\n\nAnswer: r = 14 cm, C = 88 cm, A = 616 cm²\n\nExample 4: Finding Radius from Circumference\nCircumference = 44 cm. Find radius.\n\nSolution:\nC = 2πr\n44 = 2 × 22/7 × r\n44 = 44/7 × r\nr = 44 × 7/44\nr = 7 cm\n\nAnswer: Radius = 7 cm",
+          "codeLanguage": "text",
+          "order": 7,
+          "examples": [
+            {
+              "title": "Word Problem - Circular Park",
+              "code": "Problem: A circular park has radius 35 meters. Find:\na) Distance around the park (circumference)\nb) Area of the park\n\nSolution:\na) Circumference = 2πr\n= 2 × 22/7 × 35\n= 2 × 22 × 5\n= 220 meters\n\nb) Area = πr²\n= 22/7 × 35 × 35\n= 22/7 × 1225\n= 22 × 175\n= 3,850 square meters\n\nAnswer:\na) Distance around = 220 meters\nb) Area = 3,850 sq meters",
+              "explanation": "Circumference is used for distance around circular objects. Area is used for covering circular surfaces."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

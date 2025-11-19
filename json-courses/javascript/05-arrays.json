@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "JavaScript Complete Course",
+    "slug": "javascript-complete",
+    "icon": "🟨",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Arrays in JavaScript",
+      "slug": "js-arrays",
+      "description": "Master arrays, array methods, iteration, and advanced array operations",
+      "order": 5,
+      "estimatedTime": 45,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Introduction to Arrays",
+          "type": "text",
+          "content": "Arrays are ordered collections of values. They can store multiple values in a single variable.\n\nKey Features:\n• Ordered: Elements have specific positions (index)\n• Zero-indexed: First element is at index 0\n• Dynamic: Can grow or shrink in size\n• Mixed types: Can store different data types\n• Mutable: Can be modified after creation\n\nWhen to Use Arrays:\n• Store lists of items (users, products, etc.)\n• Maintain ordered data\n• Iterate over collections\n• Implement stacks and queues\n• Store matrix data\n\nArray vs Object:\n• Arrays: Ordered, numeric indices\n• Objects: Unordered, string keys\n• Arrays: Better for lists\n• Objects: Better for structured data",
+          "order": 1
+        },
+        {
+          "title": "Creating and Accessing Arrays",
+          "type": "code",
+          "content": "// Creating arrays\nlet fruits = ['Apple', 'Banana', 'Mango'];\nlet numbers = [1, 2, 3, 4, 5];\nlet mixed = [1, 'Hello', true, null, {name: 'Raj'}];\nlet empty = [];\n\n// Using Array constructor\nlet arr1 = new Array(3);        // [empty × 3]\nlet arr2 = new Array(1, 2, 3);  // [1, 2, 3]\n\n// Accessing elements\nconsole.log(fruits[0]);   // Apple (first element)\nconsole.log(fruits[1]);   // Banana\nconsole.log(fruits[2]);   // Mango\nconsole.log(fruits[3]);   // undefined (doesn't exist)\n\n// Negative indexing (from end)\nconsole.log(fruits[fruits.length - 1]);  // Mango (last)\n\n// Array length\nconsole.log(fruits.length);  // 3\n\n// Modifying elements\nfruits[1] = 'Orange';\nconsole.log(fruits);  // ['Apple', 'Orange', 'Mango']\n\n// Adding elements\nfruits[3] = 'Grapes';\nconsole.log(fruits);  // ['Apple', 'Orange', 'Mango', 'Grapes']\n\n// Multi-dimensional arrays\nlet matrix = [\n  [1, 2, 3],\n  [4, 5, 6],\n  [7, 8, 9]\n];\n\nconsole.log(matrix[0][0]);  // 1\nconsole.log(matrix[1][2]);  // 6\nconsole.log(matrix[2][1]);  // 8",
+          "codeLanguage": "javascript",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Array Methods - Adding/Removing",
+              "code": "let fruits = ['Apple', 'Banana'];\n\n// push() - add to end\nfruits.push('Mango');\nconsole.log(fruits);  // ['Apple', 'Banana', 'Mango']\n\n// pop() - remove from end\nlet last = fruits.pop();\nconsole.log(last);    // Mango\nconsole.log(fruits);  // ['Apple', 'Banana']\n\n// unshift() - add to beginning\nfruits.unshift('Orange');\nconsole.log(fruits);  // ['Orange', 'Apple', 'Banana']\n\n// shift() - remove from beginning\nlet first = fruits.shift();\nconsole.log(first);   // Orange\nconsole.log(fruits);  // ['Apple', 'Banana']\n\n// splice() - add/remove at any position\nfruits.splice(1, 0, 'Mango', 'Grapes');\nconsole.log(fruits);  // ['Apple', 'Mango', 'Grapes', 'Banana']",
+              "explanation": "These methods modify the original array. push/pop work on end, unshift/shift on beginning, splice anywhere."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

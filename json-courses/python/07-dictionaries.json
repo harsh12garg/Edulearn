@@ -1,0 +1,40 @@
+{
+  "subjects": [{
+    "name": "Python Complete Course",
+    "slug": "python-complete",
+    "icon": "🐍",
+    "category": "programming",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Python Dictionaries",
+      "slug": "python-dictionaries",
+      "description": "Master dictionaries - key-value pairs, methods, nested dictionaries, and dictionary comprehension",
+      "order": 7,
+      "estimatedTime": 45,
+      "difficulty": "medium",
+      "contents": [
+        {
+          "title": "Introduction to Dictionaries",
+          "type": "text",
+          "content": "Dictionaries are unordered collections of key-value pairs. They are mutable and optimized for retrieving data when you know the key.\n\nDictionary Characteristics:\n• Unordered: No specific order (Python 3.7+ maintains insertion order)\n• Mutable: Can be modified after creation\n• Key-Value pairs: Each item has a key and value\n• Keys must be unique: Duplicate keys not allowed\n• Keys must be immutable: strings, numbers, tuples\n• Values can be any type: including lists, dicts\n\nWhen to Use Dictionaries:\n• Store related data (user profile, product info)\n• Fast lookups by key\n• Represent JSON data\n• Count occurrences\n• Cache/memoization\n• Configuration settings\n\nDictionary vs List:\n• Dict: Access by key, unordered\n• List: Access by index, ordered\n• Dict: Faster lookups\n• List: Better for sequences\n\nCommon Operations:\n• Adding/updating items\n• Removing items\n• Accessing values\n• Checking key existence\n• Iterating through dict",
+          "order": 1
+        },
+        {
+          "title": "Creating and Using Dictionaries",
+          "type": "code",
+          "content": "# Creating dictionaries\nperson = {\n    'name': 'Raj Sharma',\n    'age': 25,\n    'city': 'Mumbai',\n    'is_student': False\n}\n\nprint(person)  # {'name': 'Raj Sharma', 'age': 25, ...}\n\n# Empty dictionary\nempty_dict = {}\nprint(empty_dict)  # {}\n\n# Using dict() constructor\nuser = dict(name='Priya', age=22, email='priya@example.com')\nprint(user)  # {'name': 'Priya', 'age': 22, ...}\n\n# Accessing values\nprint(person['name'])  # Raj Sharma\nprint(person['age'])   # 25\n# print(person['salary'])  # KeyError!\n\n# Using get() method (safer)\nprint(person.get('name'))    # Raj Sharma\nprint(person.get('salary'))  # None (no error)\nprint(person.get('salary', 0))  # 0 (default value)\n\n# Adding/updating items\nperson['email'] = 'raj@example.com'  # Add new key\nperson['age'] = 26  # Update existing key\nprint(person)\n\n# Removing items\ndel person['is_student']  # Delete key\nprint(person)\n\nage = person.pop('age')  # Remove and return value\nprint(age)  # 26\nprint(person)\n\nlast_item = person.popitem()  # Remove last item\nprint(last_item)  # ('email', 'raj@example.com')\n\n# Check if key exists\nif 'name' in person:\n    print('Name exists')\n\nif 'salary' not in person:\n    print('Salary not found')\n\n# Dictionary length\nprint(len(person))  # Number of key-value pairs\n\n# Clear all items\nperson.clear()\nprint(person)  # {}",
+          "codeLanguage": "python",
+          "order": 2,
+          "examples": [
+            {
+              "title": "Dictionary Methods and Operations",
+              "code": "# keys(), values(), items()\nuser = {'name': 'Raj', 'age': 25, 'city': 'Mumbai'}\n\n# Get all keys\nkeys = user.keys()\nprint(keys)  # dict_keys(['name', 'age', 'city'])\nprint(list(keys))  # ['name', 'age', 'city']\n\n# Get all values\nvalues = user.values()\nprint(list(values))  # ['Raj', 25, 'Mumbai']\n\n# Get all key-value pairs\nitems = user.items()\nprint(list(items))  # [('name', 'Raj'), ('age', 25), ...]\n\n# Iterating through dictionary\nfor key in user:\n    print(f'{key}: {user[key]}')\n\nfor key, value in user.items():\n    print(f'{key}: {value}')\n\n# update() - merge dictionaries\nuser = {'name': 'Raj', 'age': 25}\nmore_info = {'city': 'Mumbai', 'email': 'raj@example.com'}\nuser.update(more_info)\nprint(user)  # All keys merged\n\n# copy() - create shallow copy\noriginal = {'a': 1, 'b': 2}\ncopy = original.copy()\ncopy['c'] = 3\nprint(original)  # {'a': 1, 'b': 2}\nprint(copy)      # {'a': 1, 'b': 2, 'c': 3}\n\n# fromkeys() - create dict with same value\nkeys = ['name', 'age', 'city']\ndefault_dict = dict.fromkeys(keys, 'Unknown')\nprint(default_dict)\n# {'name': 'Unknown', 'age': 'Unknown', 'city': 'Unknown'}",
+              "explanation": "Dictionary methods provide powerful ways to manipulate and iterate through dictionaries. Use items() for key-value iteration."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

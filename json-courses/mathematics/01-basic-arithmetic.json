@@ -1,0 +1,127 @@
+{
+  "subjects": [{
+    "name": "Mathematics Complete Course",
+    "slug": "mathematics-complete",
+    "description": "Complete Mathematics course from Class 1 to 12 - CBSE/ICSE/State Board",
+    "icon": "🔢",
+    "category": "mathematics",
+    "level": "all",
+    "order": 1,
+    "topics": [{
+      "title": "Basic Arithmetic Operations",
+      "slug": "basic-arithmetic",
+      "description": "Master addition, subtraction, multiplication, and division with detailed examples",
+      "order": 1,
+      "estimatedTime": 45,
+      "difficulty": "easy",
+      "contents": [
+        {
+          "title": "Introduction to Numbers",
+          "type": "text",
+          "content": "Numbers are the foundation of mathematics. Understanding numbers is essential for all mathematical operations.\n\nTypes of Numbers:\n• Natural Numbers: 1, 2, 3, 4, 5... (counting numbers)\n• Whole Numbers: 0, 1, 2, 3, 4, 5... (natural numbers + zero)\n• Integers: ...-3, -2, -1, 0, 1, 2, 3... (positive and negative whole numbers)\n• Rational Numbers: Numbers that can be expressed as fractions (1/2, 3/4, 5/6)\n• Irrational Numbers: Numbers that cannot be expressed as fractions (π, √2)\n• Real Numbers: All rational and irrational numbers\n\nPlace Value System:\n• Ones (1)\n• Tens (10)\n• Hundreds (100)\n• Thousands (1,000)\n• Ten Thousands (10,000)\n• Lakhs (1,00,000)\n• Ten Lakhs (10,00,000)\n• Crores (1,00,00,000)\n\nExample: In 5,47,832\n• 5 is in Lakhs place = 5,00,000\n• 4 is in Ten Thousands place = 40,000\n• 7 is in Thousands place = 7,000\n• 8 is in Hundreds place = 800\n• 3 is in Tens place = 30\n• 2 is in Ones place = 2",
+          "order": 1
+        },
+        {
+          "title": "Addition (+)",
+          "type": "text",
+          "content": "Addition is the process of combining two or more numbers to get a total or sum.\n\nProperties of Addition:\n1. Commutative Property: a + b = b + a\n   Example: 5 + 3 = 3 + 5 = 8\n\n2. Associative Property: (a + b) + c = a + (b + c)\n   Example: (2 + 3) + 4 = 2 + (3 + 4) = 9\n\n3. Identity Property: a + 0 = a\n   Example: 7 + 0 = 7\n\nSteps for Addition:\n1. Write numbers one below the other\n2. Align digits according to place value\n3. Add from right to left (ones, tens, hundreds...)\n4. Carry over if sum is 10 or more\n\nKey Terms:\n• Addend: Numbers being added\n• Sum: Result of addition\n• Carry: When sum exceeds 9 in a column",
+          "order": 2
+        },
+        {
+          "title": "Addition Examples",
+          "type": "code",
+          "content": "Example 1: Simple Addition\n  234\n+ 156\n-----\n  390\n\nStep by step:\n4 + 6 = 10 (write 0, carry 1)\n3 + 5 + 1 = 9\n2 + 1 = 3\nAnswer: 390\n\nExample 2: Addition with Multiple Carries\n  4,567\n+ 3,895\n-------\n  8,462\n\nStep by step:\n7 + 5 = 12 (write 2, carry 1)\n6 + 9 + 1 = 16 (write 6, carry 1)\n5 + 8 + 1 = 14 (write 4, carry 1)\n4 + 3 + 1 = 8\nAnswer: 8,462\n\nExample 3: Adding Three Numbers\n  125\n  347\n+ 289\n-----\n  761\n\nStep by step:\n5 + 7 + 9 = 21 (write 1, carry 2)\n2 + 4 + 8 + 2 = 16 (write 6, carry 1)\n1 + 3 + 2 + 1 = 7\nAnswer: 761",
+          "codeLanguage": "text",
+          "order": 3,
+          "examples": [
+            {
+              "title": "Word Problem - Addition",
+              "code": "Problem: Raj has 245 marbles. His friend gives him 178 more marbles. How many marbles does Raj have now?\n\nSolution:\nMarbles Raj had = 245\nMarbles received = 178\nTotal marbles = 245 + 178\n\n  245\n+ 178\n-----\n  423\n\nAnswer: Raj has 423 marbles now.",
+              "explanation": "In word problems, identify what needs to be added. Keywords like 'total', 'altogether', 'sum', 'in all' indicate addition."
+            },
+            {
+              "title": "Real-Life Application",
+              "code": "Problem: A shopkeeper sold items worth ₹3,450 on Monday, ₹2,780 on Tuesday, and ₹4,125 on Wednesday. What is the total sale?\n\nSolution:\nMonday sale = ₹3,450\nTuesday sale = ₹2,780\nWednesday sale = ₹4,125\n\n  3,450\n  2,780\n+ 4,125\n-------\n 10,355\n\nAnswer: Total sale = ₹10,355",
+              "explanation": "Addition is used in daily life for calculating totals, combining quantities, and finding sums."
+            }
+          ]
+        },
+        {
+          "title": "Subtraction (−)",
+          "type": "text",
+          "content": "Subtraction is the process of taking away one number from another to find the difference.\n\nProperties of Subtraction:\n1. NOT Commutative: a - b ≠ b - a\n   Example: 8 - 3 = 5, but 3 - 8 = -5\n\n2. NOT Associative: (a - b) - c ≠ a - (b - c)\n   Example: (10 - 5) - 2 = 3, but 10 - (5 - 2) = 7\n\n3. Identity Property: a - 0 = a\n   Example: 9 - 0 = 9\n\n4. Subtracting from itself: a - a = 0\n   Example: 7 - 7 = 0\n\nSteps for Subtraction:\n1. Write larger number on top\n2. Align digits by place value\n3. Subtract from right to left\n4. Borrow if needed (when top digit is smaller)\n\nKey Terms:\n• Minuend: Number from which we subtract\n• Subtrahend: Number being subtracted\n• Difference: Result of subtraction\n• Borrow: Taking 10 from next column",
+          "order": 4
+        },
+        {
+          "title": "Subtraction Examples",
+          "type": "code",
+          "content": "Example 1: Simple Subtraction\n  567\n- 234\n-----\n  333\n\nStep by step:\n7 - 4 = 3\n6 - 3 = 3\n5 - 2 = 3\nAnswer: 333\n\nExample 2: Subtraction with Borrowing\n  5,234\n- 1,678\n-------\n  3,556\n\nStep by step:\n4 < 8, so borrow: 14 - 8 = 6\n2 < 7 (after borrowing), borrow: 12 - 7 = 5\n1 < 6 (after borrowing), borrow: 11 - 6 = 5\n4 - 1 = 3\nAnswer: 3,556\n\nExample 3: Subtraction with Zeros\n  5,000\n- 2,347\n-------\n  2,653\n\nStep by step:\n0 < 7, borrow from next column\nContinue borrowing until you reach non-zero\n10 - 7 = 3\n9 - 4 = 5 (after borrowing)\n9 - 3 = 6 (after borrowing)\n4 - 2 = 2 (after borrowing)\nAnswer: 2,653",
+          "codeLanguage": "text",
+          "order": 5,
+          "examples": [
+            {
+              "title": "Word Problem - Subtraction",
+              "code": "Problem: A library has 8,450 books. 3,275 books were issued to students. How many books are left in the library?\n\nSolution:\nTotal books = 8,450\nBooks issued = 3,275\nBooks left = 8,450 - 3,275\n\n  8,450\n- 3,275\n-------\n  5,175\n\nAnswer: 5,175 books are left in the library.",
+              "explanation": "Keywords like 'left', 'remaining', 'difference', 'how many more' indicate subtraction."
+            },
+            {
+              "title": "Finding the Missing Number",
+              "code": "Problem: What number should be added to 3,456 to get 7,890?\n\nSolution:\nLet the number be x\n3,456 + x = 7,890\nx = 7,890 - 3,456\n\n  7,890\n- 3,456\n-------\n  4,434\n\nAnswer: 4,434 should be added.",
+              "explanation": "Subtraction helps find missing addends in addition problems."
+            }
+          ]
+        },
+        {
+          "title": "Multiplication (×)",
+          "type": "text",
+          "content": "Multiplication is repeated addition. It's a faster way to add the same number multiple times.\n\nProperties of Multiplication:\n1. Commutative Property: a × b = b × a\n   Example: 4 × 5 = 5 × 4 = 20\n\n2. Associative Property: (a × b) × c = a × (b × c)\n   Example: (2 × 3) × 4 = 2 × (3 × 4) = 24\n\n3. Identity Property: a × 1 = a\n   Example: 8 × 1 = 8\n\n4. Zero Property: a × 0 = 0\n   Example: 15 × 0 = 0\n\n5. Distributive Property: a × (b + c) = (a × b) + (a × c)\n   Example: 3 × (4 + 5) = (3 × 4) + (3 × 5) = 12 + 15 = 27\n\nMultiplication Tables (1-20):\nMastering tables is crucial for quick calculations.\n\nKey Terms:\n• Multiplicand: Number being multiplied\n• Multiplier: Number by which we multiply\n• Product: Result of multiplication\n• Factors: Numbers being multiplied",
+          "order": 6
+        },
+        {
+          "title": "Multiplication Examples",
+          "type": "code",
+          "content": "Example 1: Single Digit Multiplication\n  234\n×   6\n-----\n1,404\n\nStep by step:\n6 × 4 = 24 (write 4, carry 2)\n6 × 3 = 18, + 2 = 20 (write 0, carry 2)\n6 × 2 = 12, + 2 = 14\nAnswer: 1,404\n\nExample 2: Two Digit Multiplication\n   345\n×   23\n------\n 1,035  (345 × 3)\n 6,900  (345 × 20)\n------\n 7,935\n\nStep by step:\nFirst multiply by 3: 345 × 3 = 1,035\nThen multiply by 20: 345 × 20 = 6,900\nAdd both: 1,035 + 6,900 = 7,935\nAnswer: 7,935\n\nExample 3: Multiplication by 10, 100, 1000\n45 × 10 = 450 (add one zero)\n45 × 100 = 4,500 (add two zeros)\n45 × 1,000 = 45,000 (add three zeros)\n\nShortcut: Add as many zeros as in the multiplier",
+          "codeLanguage": "text",
+          "order": 7,
+          "examples": [
+            {
+              "title": "Word Problem - Multiplication",
+              "code": "Problem: A box contains 24 chocolates. How many chocolates are there in 15 such boxes?\n\nSolution:\nChocolates in 1 box = 24\nNumber of boxes = 15\nTotal chocolates = 24 × 15\n\n   24\n×  15\n-----\n  120  (24 × 5)\n  240  (24 × 10)\n-----\n  360\n\nAnswer: There are 360 chocolates in 15 boxes.",
+              "explanation": "Keywords like 'times', 'product', 'multiply', 'each' indicate multiplication."
+            },
+            {
+              "title": "Area Calculation",
+              "code": "Problem: A rectangular garden is 25 meters long and 18 meters wide. What is its area?\n\nSolution:\nLength = 25 meters\nWidth = 18 meters\nArea = Length × Width\nArea = 25 × 18\n\n   25\n×  18\n-----\n  200  (25 × 8)\n  250  (25 × 10)\n-----\n  450\n\nAnswer: Area = 450 square meters",
+              "explanation": "Multiplication is used to calculate area, volume, and other measurements."
+            }
+          ]
+        },
+        {
+          "title": "Division (÷)",
+          "type": "text",
+          "content": "Division is splitting a number into equal parts or groups. It's the inverse of multiplication.\n\nProperties of Division:\n1. NOT Commutative: a ÷ b ≠ b ÷ a\n   Example: 12 ÷ 3 = 4, but 3 ÷ 12 = 0.25\n\n2. NOT Associative: (a ÷ b) ÷ c ≠ a ÷ (b ÷ c)\n\n3. Identity Property: a ÷ 1 = a\n   Example: 15 ÷ 1 = 15\n\n4. Division by itself: a ÷ a = 1\n   Example: 8 ÷ 8 = 1\n\n5. Zero divided by any number: 0 ÷ a = 0\n   Example: 0 ÷ 5 = 0\n\n6. Division by zero: Undefined (not possible)\n\nTypes of Division:\n• Exact Division: No remainder (12 ÷ 3 = 4)\n• Division with Remainder: (13 ÷ 3 = 4 remainder 1)\n\nKey Terms:\n• Dividend: Number being divided\n• Divisor: Number by which we divide\n• Quotient: Result of division\n• Remainder: What's left after division\n\nFormula: Dividend = (Divisor × Quotient) + Remainder",
+          "order": 8
+        },
+        {
+          "title": "Division Examples",
+          "type": "code",
+          "content": "Example 1: Simple Division\n156 ÷ 12 = ?\n\n    13\n   ----\n12 | 156\n    -12↓\n    ---\n     36\n    -36\n    ---\n      0\n\nAnswer: 156 ÷ 12 = 13\n\nExample 2: Division with Remainder\n245 ÷ 17 = ?\n\n    14\n   ----\n17 | 245\n    -17↓\n    ---\n     75\n    -68\n    ---\n      7\n\nAnswer: 245 ÷ 17 = 14 remainder 7\nOr: 245 = (17 × 14) + 7\n\nExample 3: Long Division\n5,678 ÷ 23 = ?\n\n     246\n    -----\n23 | 5,678\n    -46↓↓\n    ----\n     107\n     -92↓\n     ----\n      158\n     -138\n     ----\n       20\n\nAnswer: 5,678 ÷ 23 = 246 remainder 20",
+          "codeLanguage": "text",
+          "order": 9,
+          "examples": [
+            {
+              "title": "Word Problem - Division",
+              "code": "Problem: 456 students are to be divided equally into 12 sections. How many students will be in each section?\n\nSolution:\nTotal students = 456\nNumber of sections = 12\nStudents per section = 456 ÷ 12\n\n     38\n    ----\n12 | 456\n    -36↓\n    ---\n     96\n    -96\n    ---\n      0\n\nAnswer: Each section will have 38 students.",
+              "explanation": "Keywords like 'divide', 'share equally', 'distribute', 'per' indicate division."
+            },
+            {
+              "title": "Finding Cost Per Item",
+              "code": "Problem: 15 pens cost ₹225. What is the cost of one pen?\n\nSolution:\nTotal cost = ₹225\nNumber of pens = 15\nCost per pen = 225 ÷ 15\n\n     15\n    ----\n15 | 225\n    -15↓\n    ---\n     75\n    -75\n    ---\n      0\n\nAnswer: Cost of one pen = ₹15",
+              "explanation": "Division helps find unit price, rate, or average."
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}

@@ -1,0 +1,209 @@
+{
+  "subjects": [
+    {
+      "name": "JavaScript Programming",
+      "slug": "javascript-programming",
+      "description": "Master JavaScript from basics to advanced concepts",
+      "icon": "🟨",
+      "category": "programming",
+      "level": "beginner",
+      "order": 1,
+      "topics": [
+        {
+          "title": "Introduction to JavaScript",
+          "slug": "intro-to-javascript",
+          "description": "Learn what JavaScript is and why it's important",
+          "order": 1,
+          "estimatedTime": 10,
+          "difficulty": "easy",
+          "contents": [
+            {
+              "title": "What is JavaScript?",
+              "type": "text",
+              "content": "JavaScript is a versatile programming language that powers the interactive elements of websites. It runs in web browsers and enables dynamic content, user interactions, and modern web applications.\n\nKey features of JavaScript:\n• Runs in the browser (client-side)\n• Easy to learn for beginners\n• Powers modern web frameworks like React, Vue, and Angular\n• Can also run on servers using Node.js",
+              "order": 1
+            },
+            {
+              "title": "Your First JavaScript Code",
+              "type": "code",
+              "content": "// This is a comment\nconsole.log('Hello, World!');\n\n// Variables\nlet name = 'Student';\nconst age = 20;\n\nconsole.log('My name is ' + name);\nconsole.log('I am ' + age + ' years old');",
+              "codeLanguage": "javascript",
+              "order": 2,
+              "examples": [
+                {
+                  "title": "Printing Messages",
+                  "code": "console.log('Welcome to JavaScript!');\nconsole.log('Learning is fun!');",
+                  "explanation": "The console.log() function prints messages to the browser's console. You can use it to display text, numbers, or any data."
+                },
+                {
+                  "title": "Using Variables",
+                  "code": "let greeting = 'Hello';\nlet userName = 'Raj';\nconsole.log(greeting + ', ' + userName + '!');",
+                  "explanation": "Variables store data that you can use later. The 'let' keyword creates a variable that can be changed."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Variables and Data Types",
+          "slug": "variables-and-data-types",
+          "description": "Understanding how to store and work with different types of data",
+          "order": 2,
+          "estimatedTime": 15,
+          "difficulty": "easy",
+          "contents": [
+            {
+              "title": "Declaring Variables",
+              "type": "text",
+              "content": "In JavaScript, you can declare variables using three keywords:\n\n• let - for variables that can change\n• const - for variables that stay constant\n• var - old way (avoid using this)\n\nBest practice: Use 'const' by default, and 'let' only when you need to change the value.",
+              "order": 1
+            },
+            {
+              "title": "Variable Examples",
+              "type": "code",
+              "content": "// Using let (can be changed)\nlet score = 0;\nscore = 10;\nscore = 20;\n\n// Using const (cannot be changed)\nconst PI = 3.14159;\nconst siteName = 'EduLearn India';\n\n// This would cause an error:\n// PI = 3.14; // Error!",
+              "codeLanguage": "javascript",
+              "order": 2
+            },
+            {
+              "title": "Data Types in JavaScript",
+              "type": "text",
+              "content": "JavaScript has several data types:\n\n1. String - Text data ('hello', \"world\")\n2. Number - Numeric data (42, 3.14)\n3. Boolean - True or false values\n4. Array - List of values [1, 2, 3]\n5. Object - Collection of key-value pairs\n6. Undefined - Variable declared but not assigned\n7. Null - Intentionally empty value",
+              "order": 3
+            },
+            {
+              "title": "Data Type Examples",
+              "type": "code",
+              "content": "// String\nlet name = 'Priya';\nlet city = \"Mumbai\";\n\n// Number\nlet age = 25;\nlet price = 99.99;\n\n// Boolean\nlet isStudent = true;\nlet hasGraduated = false;\n\n// Array\nlet colors = ['red', 'green', 'blue'];\nlet numbers = [1, 2, 3, 4, 5];\n\n// Object\nlet person = {\n  name: 'Amit',\n  age: 30,\n  city: 'Delhi'\n};",
+              "codeLanguage": "javascript",
+              "order": 4,
+              "examples": [
+                {
+                  "title": "Working with Strings",
+                  "code": "let firstName = 'Rahul';\nlet lastName = 'Sharma';\nlet fullName = firstName + ' ' + lastName;\nconsole.log(fullName); // Output: Rahul Sharma",
+                  "explanation": "You can combine strings using the + operator. This is called string concatenation."
+                },
+                {
+                  "title": "Working with Numbers",
+                  "code": "let a = 10;\nlet b = 5;\nlet sum = a + b;\nlet product = a * b;\nconsole.log(sum);     // 15\nconsole.log(product); // 50",
+                  "explanation": "JavaScript can perform mathematical operations like addition, subtraction, multiplication, and division."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Functions in JavaScript",
+          "slug": "functions-in-javascript",
+          "description": "Learn how to create reusable blocks of code",
+          "order": 3,
+          "estimatedTime": 20,
+          "difficulty": "medium",
+          "contents": [
+            {
+              "title": "What are Functions?",
+              "type": "text",
+              "content": "Functions are reusable blocks of code that perform specific tasks. They help you:\n\n• Organize your code\n• Avoid repetition\n• Make code easier to maintain\n• Break complex problems into smaller parts\n\nThink of functions like recipes - you write them once and use them many times!",
+              "order": 1
+            },
+            {
+              "title": "Creating Functions",
+              "type": "code",
+              "content": "// Function declaration\nfunction greet(name) {\n  console.log('Hello, ' + name + '!');\n}\n\n// Calling the function\ngreet('Priya');  // Output: Hello, Priya!\ngreet('Amit');   // Output: Hello, Amit!\n\n// Function with return value\nfunction add(a, b) {\n  return a + b;\n}\n\nlet result = add(5, 3);\nconsole.log(result); // Output: 8",
+              "codeLanguage": "javascript",
+              "order": 2,
+              "examples": [
+                {
+                  "title": "Function with Multiple Parameters",
+                  "code": "function calculateArea(length, width) {\n  let area = length * width;\n  return area;\n}\n\nlet roomArea = calculateArea(10, 12);\nconsole.log('Room area: ' + roomArea + ' sq meters');",
+                  "explanation": "This function takes two parameters (length and width) and returns their product. You can use the returned value in your code."
+                },
+                {
+                  "title": "Arrow Functions (Modern Syntax)",
+                  "code": "// Traditional function\nfunction square(x) {\n  return x * x;\n}\n\n// Arrow function (shorter)\nconst square = (x) => x * x;\n\nconsole.log(square(5)); // Output: 25",
+                  "explanation": "Arrow functions are a shorter way to write functions. They're commonly used in modern JavaScript."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Python Programming",
+      "slug": "python-programming",
+      "description": "Learn Python programming from scratch",
+      "icon": "🐍",
+      "category": "programming",
+      "level": "beginner",
+      "order": 2,
+      "topics": [
+        {
+          "title": "Introduction to Python",
+          "slug": "intro-to-python",
+          "description": "Get started with Python programming",
+          "order": 1,
+          "estimatedTime": 12,
+          "difficulty": "easy",
+          "contents": [
+            {
+              "title": "What is Python?",
+              "type": "text",
+              "content": "Python is a popular, easy-to-learn programming language used for:\n\n• Web development (Django, Flask)\n• Data science and machine learning\n• Automation and scripting\n• Game development\n• Desktop applications\n\nPython is known for its simple, readable syntax that looks almost like English!",
+              "order": 1
+            },
+            {
+              "title": "Your First Python Program",
+              "type": "code",
+              "content": "# This is a comment\nprint('Hello, World!')\n\n# Variables in Python\nname = 'Student'\nage = 20\n\nprint('My name is', name)\nprint('I am', age, 'years old')",
+              "codeLanguage": "python",
+              "order": 2,
+              "examples": [
+                {
+                  "title": "Print Function",
+                  "code": "print('Welcome to Python!')\nprint('Python is awesome!')\nprint(2 + 2)  # Output: 4",
+                  "explanation": "The print() function displays output to the screen. You can print text, numbers, or results of calculations."
+                },
+                {
+                  "title": "Variables in Python",
+                  "code": "# No need for let or const in Python!\nname = 'Raj'\ncity = 'Bangalore'\nage = 25\n\nprint(f'My name is {name}')\nprint(f'I live in {city}')\nprint(f'I am {age} years old')",
+                  "explanation": "Python uses f-strings for easy string formatting. Just put 'f' before the string and use {variable} to insert values."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Python Data Types",
+          "slug": "python-data-types",
+          "description": "Understanding Python's built-in data types",
+          "order": 2,
+          "estimatedTime": 18,
+          "difficulty": "easy",
+          "contents": [
+            {
+              "title": "Basic Data Types",
+              "type": "text",
+              "content": "Python has several built-in data types:\n\n• int - Whole numbers (1, 42, -10)\n• float - Decimal numbers (3.14, -0.5)\n• str - Text strings ('hello', \"world\")\n• bool - True or False\n• list - Ordered collection [1, 2, 3]\n• dict - Key-value pairs {'name': 'Raj'}\n• tuple - Immutable list (1, 2, 3)\n• set - Unique values {1, 2, 3}",
+              "order": 1
+            },
+            {
+              "title": "Working with Data Types",
+              "type": "code",
+              "content": "# Numbers\nage = 25              # int\nprice = 99.99         # float\n\n# Strings\nname = 'Priya'\ncity = \"Mumbai\"\n\n# Boolean\nis_student = True\nhas_passed = False\n\n# List (can be modified)\nfruits = ['apple', 'banana', 'orange']\nfruits.append('mango')\n\n# Dictionary\nperson = {\n    'name': 'Amit',\n    'age': 30,\n    'city': 'Delhi'\n}\n\nprint(person['name'])  # Output: Amit",
+              "codeLanguage": "python",
+              "order": 2,
+              "examples": [
+                {
+                  "title": "List Operations",
+                  "code": "numbers = [1, 2, 3, 4, 5]\n\n# Add item\nnumbers.append(6)\n\n# Remove item\nnumbers.remove(3)\n\n# Get length\nprint(len(numbers))\n\n# Access by index\nprint(numbers[0])  # First item",
+                  "explanation": "Lists are versatile and can store multiple items. You can add, remove, and access items easily."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
